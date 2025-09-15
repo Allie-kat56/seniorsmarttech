@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://seniorsmarttech.k8reviews.com/sitemap.xml
