@@ -1,92 +1,341 @@
-/* Global reset */
+/* ===========================================================
+    SENIOR SMART TECH – ACCESSIBLE STYLESHEET
+    Aesthetic: Comfort & Clarity (Soft Sky Blue, Forest Green, Coral CTA)
+=========================================================== */
+
+/* --- GLOBAL RESET --- */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Body & typography */
+/* --- BASE TYPOGRAPHY & BODY --- */
 body {
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding-bottom: 200px; /* space for sticky table */
+    /* NEW: Soft Sky Blue Background */
+    background-color: #E0F7FA; 
+    /* NEW: Very Dark Gray Text for MAX contrast */
+    color: #212121; 
+    /* Using a highly readable font */
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1.15rem; /* Larger base font size for seniors */
+    line-height: 1.8; /* Increased line height for better scanning */
+    letter-spacing: 0.2px;
+    scroll-behavior: smooth;
 }
 
-/* Header */
+/* Headings */
+h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    /* NEW: Deep Forest Green */
+    color: #004D40; 
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2.0em; }
+h3 { font-size: 1.5em; }
+
+/* Links */
+a {
+    /* NEW: Deep Forest Green for links */
+    color: #004D40; 
+    text-decoration: underline;
+    text-decoration-thickness: 2px; /* Thicker underline for visibility */
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+a:hover {
+    color: #FF8A65; /* Coral on hover */
+    opacity: 0.9;
+}
+a:focus {
+    /* High-contrast focus ring for accessibility */
+    outline: 4px solid #F59E0B; 
+    outline-offset: 3px;
+}
+
+/* --- HEADER --- */
 header {
-  background: #4CAF50;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 4px solid #388E3C;
+    background-color: #FFFFFF;
+    padding: 40px 5%;
+    text-align: center;
+    border-bottom: 5px solid #004D40; /* Strong border for prominence */
+    box-shadow: 0 4px 10px rgba(0, 77, 64, 0.1);
 }
-
 header h1 {
-  font-size: 2rem;
+    font-size: 3.2em;
+    margin-bottom: 5px;
+}
+header p {
+    /* Subtler secondary text color */
+    color: #4CAF50; 
+    font-style: italic;
+    font-size: 1.3em;
 }
 
-/* Main content */
-main {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 15px;
+/* --- UNIFIED CONTAINER WIDTH --- */
+section, footer {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 35px;
+    /* Clean White background for clarity */
+    background: #FFFFFF; 
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(33, 33, 33, 0.1);
 }
 
-section {
-  margin-bottom: 40px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+/* --- INTRO SECTION --- */
+.intro {
+    text-align: center;
+}
+.intro h2 {
+    font-size: 2.2em;
+}
+.intro .lead {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #004D40;
+}
+.intro p {
+    margin-bottom: 20px;
 }
 
-section h2 {
-  margin-bottom: 10px;
-  color: #4CAF50;
+/* --- BUTTON STYLES (High-Contrast) --- */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 14px 30px;
+    border-radius: 35px;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
 }
 
-/* Sticky comparison table */
-.comparison-table {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  border-top: 2px solid #4CAF50;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-  overflow-x: auto;
-  padding: 10px;
-  z-index: 999;
+/* Primary CTA: Forest Green */
+.btn-primary {
+    background: #004D40; 
+}
+.btn-primary:hover {
+    background: #FF8A65; /* Coral on hover */
+    transform: translateY(-3px);
 }
 
-.comparison-table table {
-  width: 100%;
-  border-collapse: collapse;
+/* Secondary CTA: Coral Accent */
+.btn-secondary {
+    background: #FF8A65; 
+}
+.btn-secondary:hover {
+    background: #004D40; /* Forest Green on hover */
+    transform: translateY(-3px);
 }
 
-.comparison-table th,
-.comparison-table td {
-  padding: 12px;
-  text-align: center;
-  border: 1px solid #ddd;
+/* --- CATEGORY GRID --- */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
 }
 
-.comparison-table th {
-  background: #4CAF50;
-  color: white;
+.category-card {
+    border: 1px solid #E0F0E0;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+    background-color: #F8FFFF; /* Slight off-white background */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.comparison-table button {
-  background: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 77, 64, 0.1);
 }
 
-.comparison-table button:hover {
-  background: #388E3C;
+.category-card h3 {
+    color: #004D40;
+    font-size: 1.3em;
+    min-height: 2.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-card .icon {
+    font-size: 1.8em;
+    margin-right: 10px;
+    color: #FF8A65; /* Coral icon color */
+}
+
+/* --- METHODOLOGY/TRUST SECTION --- */
+.methodology {
+    border-left: 8px solid #FF8A65; /* Coral accent line */
+    padding-left: 30px;
+    border-radius: 15px;
+    background-color: #F8F8F8;
+}
+
+.methodology ul {
+    list-style: none;
+    padding: 0;
+}
+
+.methodology li {
+    margin-bottom: 15px;
+    padding: 10px 0;
+    font-size: 1.05em;
+    /* NEW: Very Dark Gray Text */
+    color: #212121; 
+}
+
+.methodology li strong {
+    color: #004D40; /* Forest Green emphasis */
+    font-weight: 700;
+}
+
+/* --- FEATURED REVIEW --- */
+.featured-review {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    background: #E0F7FA; /* Soft Sky Blue background */
+    border: 3px solid #004D40;
+}
+
+.featured-review img {
+    flex: 1 1 300px;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-review .review-text {
+    flex: 2 1 400px;
+    padding: 10px 0;
+}
+
+.featured-review h2 {
+    width: 100%;
+    margin-bottom: 10px;
+    color: #212121;
+}
+
+.featured-review p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.cta-coral {
+    /* Specifically ensure the CTA is the Coral color in this section for contrast */
+    background: #FF8A65; 
+    border: 2px solid #E0F7FA;
+}
+.cta-coral:hover {
+    background: #F59E0B; /* Warm Orange for contrast */
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    background: #004D40; /* Deep Forest Green Footer */
+    color: #FFFFFF;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-radius: 0; /* Remove top border-radius for full width effect */
+}
+
+footer p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.disclosure {
+    font-size: 0.9rem;
+    color: #90CAF9; /* Soft light blue disclosure text */
+}
+
+/* =================================================================
+    RESPONSIVE DESIGN (Adjusted for larger text)
+================================================================= */
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 1.1rem;
+    }
+    
+    section, footer {
+        margin: 30px 15px;
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+    header p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1.05rem;
+    }
+
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.7em; }
+    h3 { font-size: 1.3em; }
+
+    .category-grid {
+        gap: 20px;
+    }
+
+    .category-card {
+        padding: 20px;
+    }
+    
+    .featured-review {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .featured-review img {
+        max-width: 100%;
+    }
+
+    .featured-review .review-text {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem;
+    }
+
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.2em; }
+    
+    header {
+        padding: 30px 5%;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 12px 24px;
+        font-size: 1em;
+        width: 100%; /* Full width buttons for easy tapping */
+        box-sizing: border-box;
+    }
 }
