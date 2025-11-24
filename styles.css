@@ -1,27 +1,27 @@
 /* ===========================================================
-    SENIOR SMART TECH – ACCESSIBLE STYLESHEET (REVISED)
-    Aesthetic: Soft Pastels (Pale Blue/Green) & Your Stride Layout
+    SENIOR SMART TECH – ACCESSIBLE STYLESHEET (REVISED & SOFTENED)
+    Aesthetic: Human-Centered, Soft Pastels, Left-Aligned Clarity.
 =========================================================== */
 
 /* --- 0. COLOR PALETTE & VARIABLES --- */
 :root {
-    /* Pale Pastel Colors (Your Stride Inspired) */
-    --color-pale-blue: #C1D9EA; /* Soft Sky Blue (Lighter than your original) */
-    --color-pale-green: #D9EAD1; /* Light, calming green */
-    --color-accent-pink: #F8E0E8; /* Soft pale pink/coral for highlights */
+    /* Pale Pastel Colors (Your Stride / Golden Retirement Inspired) */
+    --color-pale-blue: #C1D9EA;      /* Soft Sky Blue */
+    --color-pale-green: #D9EAD1;     /* Light, calming green */
+    --color-soft-peach: #FFEBE4;     /* Extremely soft light accent */
 
     /* High Contrast Text Colors (For Accessibility) */
-    --color-primary-text: #212121; /* Very Dark Gray Text for MAX contrast */
+    --color-primary-text: #212121;   /* Very Dark Gray Text for MAX contrast */
     --color-secondary-text: #666;
-    --color-forest-green: #004D40; /* Deep Forest Green for emphasis */
-    --color-coral-cta: #FF8A65; /* Bright Coral for critical CTAs */
+    --color-forest-green: #004D40;   /* Deep Forest Green for emphasis and headings */
+    --color-coral-cta: #FF8A65;      /* Bright Coral for critical CTAs */
 
     /* Backgrounds */
-    --color-background-soft: #F5F7F8; /* Very light, soft background */
+    --color-background-soft: #F5F7F8; 
     --color-white: #FFFFFF;
 }
 
-/* --- GLOBAL RESET & BASE TYPOGRAPHY --- */
+/* --- GLOBAL RESET & BASE TYPOGRAPHY (ENFORCING LEFT-ALIGNMENT) --- */
 * {
     margin: 0;
     padding: 0;
@@ -29,29 +29,24 @@
 }
 
 body {
-    background-color: var(--color-background-soft); /* Soft light background */
+    background-color: var(--color-background-soft);
     color: var(--color-primary-text);
     font-family: 'Roboto', sans-serif;
     font-size: 1.15rem; 
-    line-height: 1.6; /* Slightly reduced for Your Stride feel, still accessible */
-    letter-spacing: 0.2px;
+    line-height: 1.7; /* Generous spacing */
     scroll-behavior: smooth;
-    text-align: left; /* ENSURE everything defaults to left-aligned */
 }
 
 /* Headings (Left-Aligned and Dark Green) */
-h1, h2, h3, h4 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+h1, h2, h3, h4, p, li {
+    text-align: left; /* Crucial override */
     color: var(--color-forest-green);
-    margin-bottom: 20px;
     line-height: 1.2;
-    text-align: left; /* Crucial for overriding any default centering */
 }
 
-h1 { font-size: 2.5em; }
-h2 { font-size: 2.0em; }
-h3 { font-size: 1.5em; }
+h1 { font-size: 2.8em; margin-bottom: 10px; }
+h2 { font-size: 2.2em; margin-bottom: 30px; }
+h3 { font-size: 1.6em; margin-bottom: 15px; }
 
 /* Links */
 a {
@@ -70,133 +65,104 @@ a:focus {
     outline-offset: 3px;
 }
 
-/* --- 1. NAVIGATION BAR --- (New Element) */
+/* --- 1. NAVIGATION BAR (CLEANER) --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--color-white);
-    padding: 10px 5%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding: 15px 5%; /* Slightly larger padding */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 .navbar .logo-area {
-    font-size: 1.5em;
+    font-size: 1.6em; /* Slightly larger logo text */
     font-weight: 700;
     color: var(--color-forest-green);
     display: flex;
     align-items: center;
 }
 .navbar .logo-area img {
-    height: 35px; 
+    height: 40px; 
     margin-right: 10px;
+    border-radius: 5px; /* Softer logo style */
 }
 
-/* --- 2. HEADER/HERO BANNER (REVISED) --- */
+/* --- 2. HEADER/HERO BANNER (IMAGE & SOFT TEXT) --- */
 .header-hero {
-    background-color: var(--color-pale-blue); /* Soft blue backdrop */
-    padding: 60px 5%;
-    text-align: left; /* Keep text left-aligned */
+    /* Placeholder for a soft, light background image */
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('images/washed-out-aspirational-background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 70px 5%;
     color: var(--color-primary-text); 
     border-bottom: 5px solid var(--color-pale-green);
+    text-align: left;
 }
 .header-hero h1 {
-    font-size: 3.2em;
-    margin-bottom: 5px;
     color: var(--color-forest-green);
+    font-weight: 700;
 }
 .header-hero p {
     color: var(--color-primary-text);
-    font-style: normal;
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: 300;
-    max-width: 800px;
+    max-width: 900px;
 }
 
-/* --- 3. UNIFIED CONTAINER WIDTH & SECTION STYLING --- */
+/* --- 3. UNIFIED CONTAINER & SECTION STYLING --- */
 main {
-    padding-bottom: 120px; /* Space for the sticky table */
+    padding-bottom: 120px;
 }
 
 section {
     max-width: 1100px;
-    margin: 40px auto;
-    padding: 35px;
+    margin: 50px auto;
+    padding: 40px;
     background: var(--color-white);
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(33, 33, 33, 0.1);
+    box-shadow: 0 6px 20px rgba(33, 33, 33, 0.08); /* Softer, deeper shadow */
 }
-/* Ensure the H2s look clean and Your Stride-like */
 section h2 {
     border-bottom: 2px solid var(--color-pale-blue);
     padding-bottom: 5px;
-    margin-bottom: 30px;
+    text-transform: capitalize; /* Cleaner look for section titles */
 }
 
-
-/* --- 4. AS SEEN BY SECTION (NEW) --- */
-.as-seen-by {
-    text-align: center;
-    padding: 30px 5%;
-    background-color: var(--color-pale-green);
-    margin-bottom: 40px;
-    border-radius: 10px;
-}
-.as-seen-by h3 {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: var(--color-forest-green);
-    text-align: center;
-}
-.logo-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-.logo-container img {
-    max-height: 45px;
-    width: auto;
-    opacity: 0.8;
-    filter: grayscale(100%);
-    transition: opacity 0.3s, filter 0.3s;
-}
-.logo-container img:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-}
-
-
-/* --- 5. INTRO SECTION --- */
+/* --- 4. INTRO SECTION (Minimal, Left-Aligned) --- */
 .intro {
-    text-align: left;
+    padding-bottom: 20px; 
+    /* The core text is now in the lead p tag */
 }
 .intro .lead {
     font-size: 1.3em;
-    font-weight: 400; /* Softer weight */
     margin-bottom: 15px;
-    color: var(--color-forest-green);
+    font-weight: 400;
+    color: var(--color-primary-text);
+    max-width: 90%;
+}
+.intro p {
+    color: var(--color-secondary-text);
+    max-width: 90%;
 }
 
-/* --- 6. BUTTON STYLES (Pastel High-Contrast) --- */
+/* --- 5. BUTTON STYLES (Soft & Simple) --- */
 .btn-primary, .btn-secondary {
     display: inline-block;
-    color: var(--color-primary-text); /* Dark text for contrast on pastels */
+    color: var(--color-primary-text); 
     font-weight: 700;
-    padding: 14px 30px;
-    border-radius: 35px;
+    padding: 12px 28px;
+    border-radius: 6px; /* Squarer buttons for a cleaner look */
     margin-top: 15px;
     text-decoration: none;
-    font-size: 1.1em;
-    border: none;
+    font-size: 1.05em;
+    border: 2px solid transparent;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-    text-transform: uppercase;
-    text-align: center; /* Ensures text is centered within the button box */
+    transition: all 0.3s ease;
+    text-transform: none; /* Removing uppercase for softer feel */
+    text-align: center;
 }
 
 /* Primary CTA: Pale Blue */
@@ -206,7 +172,8 @@ section h2 {
 .btn-primary:hover {
     background: var(--color-forest-green);
     color: var(--color-white);
-    transform: translateY(-3px);
+    border-color: var(--color-forest-green);
+    transform: translateY(-2px);
 }
 
 /* Secondary CTA: Pale Green */
@@ -216,55 +183,45 @@ section h2 {
 .btn-secondary:hover {
     background: var(--color-coral-cta);
     color: var(--color-white);
-    transform: translateY(-3px);
+    border-color: var(--color-coral-cta);
+    transform: translateY(-2px);
 }
 
-/* --- 7. CATEGORY CARDS (Pastel Cards) --- */
-.category-grid {
+/* --- 6. CORE BENEFIT CARDS (Replaces Category Grid) --- */
+.benefit-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    /* Removed text-align: center; */
+    margin-top: 40px;
 }
-
-.category-card {
-    border: none; /* Removed harsh border */
-    border-radius: 12px; /* Slightly softer corners */
+.benefit-card {
+    border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--color-pale-blue);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s;
-    background-color: var(--color-pale-blue); /* Default pale blue */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
-.category-card:nth-child(2) { background-color: var(--color-pale-green); }
-.category-card:nth-child(3) { background-color: var(--color-accent-pink); }
+/* Alternating colors */
+.benefit-card:nth-child(2) { background-color: var(--color-pale-green); }
+.benefit-card:nth-child(3) { background-color: var(--color-soft-peach); }
 
-.category-card:hover {
+.benefit-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
-
-.category-card h3 {
+.benefit-card h3 {
+    font-size: 1.3em;
     color: var(--color-forest-green);
-    font-size: 1.4em;
-    min-height: auto;
-    align-items: flex-start; /* Left-align icon/text in card title */
-    justify-content: flex-start;
-    text-align: left;
+    border-bottom: 2px solid rgba(0, 77, 64, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
-.category-card p {
+.benefit-card p {
     color: var(--color-secondary-text);
+    font-size: 1em;
 }
 
-.category-card .icon {
-    font-size: 1.5em;
-    margin-right: 10px;
-    color: var(--color-forest-green); 
-}
-
-/* --- 8. PRODUCT REVIEW CARDS --- */
+/* --- 7. PRODUCT REVIEW CARDS --- */
 .review-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -284,30 +241,49 @@ section h2 {
     border-radius: 8px;
     margin-bottom: 15px;
 }
+.product-review-card h3 {
+    font-size: 1.4em;
+    color: var(--color-coral-cta); /* Highlighting the name */
+}
+.product-review-card p {
+    color: var(--color-secondary-text);
+}
 
-/* Testimonial Box (Integrated Social Proof) */
-.testimonial-box {
-    background-color: var(--color-pale-green);
-    padding: 15px;
+/* --- 8. CUSTOMER SUCCESS (Replacing FAQ) --- */
+.customer-success {
+    background-color: var(--color-soft-peach);
+    border-left: 8px solid var(--color-coral-cta);
+}
+.customer-review-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+.customer-review-list li {
+    background: var(--color-white);
+    padding: 20px;
     border-radius: 8px;
-    margin-top: 20px;
-    border-left: 5px solid var(--color-coral-cta);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-size: 1em;
+    line-height: 1.5;
+}
+.customer-review-list li .quote {
     font-style: italic;
-    font-size: 0.95em;
+    margin-bottom: 10px;
     color: var(--color-primary-text);
 }
-.testimonial-box p:last-child {
-    font-weight: 700;
+.customer-review-list li .source {
+    display: block;
     text-align: right;
-    margin-top: 5px;
-    font-style: normal;
-}
-/* Alternating color for clarity */
-.product-review-card:nth-child(odd) .testimonial-box {
-    background-color: var(--color-pale-blue);
+    font-weight: 700;
+    color: var(--color-forest-green);
+    font-size: 0.9em;
 }
 
-/* --- 9. COMPARISON TABLE (Standard) --- */
+/* --- 9. COMPARISON TABLE (Standard & Sticky styles remain similar) --- */
+
 .table-wrapper table {
     width: 100%;
     border-collapse: collapse;
@@ -325,20 +301,19 @@ section h2 {
     font-weight: 700;
 }
 .table-wrapper tr:nth-child(even) {
-    background-color: var(--color-pale-blue);
+    background-color: var(--color-soft-peach);
 }
 .table-wrapper tr:nth-child(odd) {
     background-color: var(--color-white);
 }
 
-
-/* --- 10. STICKY COMPARISON TABLE (FIXED FOOTER BAR) --- */
+/* STICKY COMPARISON TABLE */
 .sticky-table-wrapper {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--color-forest-green); /* Darker background for visibility */
+    background-color: var(--color-forest-green); 
     border-top: 5px solid var(--color-coral-cta);
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
     z-index: 1000;
@@ -376,14 +351,9 @@ section h2 {
     border-radius: 6px;
     font-weight: 700;
 }
-.sticky-table .btn-buy:hover {
-    background-color: var(--color-pale-blue);
-    text-decoration: none;
-}
 .sticky-table .buy-col {
     padding: 8px 5px;
 }
-/* Zebra striping for sticky table */
 .sticky-table tr:nth-child(even) td {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -392,31 +362,7 @@ section h2 {
 }
 
 
-/* --- 11. FAQ Section --- */
-.faq ul {
-    list-style: none;
-    padding: 0;
-}
-.faq li {
-    background: var(--color-white);
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    font-size: 1.05em;
-    border-left: 5px solid var(--color-pale-green);
-}
-.faq li strong {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--color-forest-green);
-}
-.faq li span {
-    color: var(--color-secondary-text);
-}
-
-
-/* --- 12. FOOTER --- */
+/* --- FOOTER --- */
 footer {
     text-align: center;
     background: var(--color-forest-green); 
@@ -433,11 +379,11 @@ footer p {
 
 .disclosure {
     font-size: 0.9rem;
-    color: #C1D9EA; /* Pale blue disclosure text */
+    color: #C1D9EA;
 }
 
 /* =================================================================
-    RESPONSIVE DESIGN (Adjusted for larger text)
+    RESPONSIVE DESIGN 
 ================================================================= */
 
 @media (max-width: 1150px) {
@@ -448,39 +394,22 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 1.05rem;
-    }
-
+    body { font-size: 1.05rem; }
     h1 { font-size: 2.2em; }
     h2 { font-size: 1.7em; }
     h3 { font-size: 1.3em; }
     
-    .header-hero {
-        padding: 40px 5%;
-    }
-    .header-hero h1 {
-        font-size: 2.5em;
-    }
+    .header-hero { padding: 40px 5%; }
+    .header-hero h1 { font-size: 2.5em; }
     
-    .category-grid, .review-grid {
-        gap: 20px;
-    }
+    .benefit-grid, .review-grid { gap: 20px; }
+    .customer-review-list { gap: 15px; }
 
-    .as-seen-by {
-        padding: 20px 5%;
-    }
-    
-    .sticky-table-wrapper {
-        padding: 5px 0;
-    }
+    .sticky-table-wrapper { padding: 5px 0; }
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 1rem;
-    }
-
+    body { font-size: 1rem; }
     h1 { font-size: 1.8em; }
     h2 { font-size: 1.5em; }
     h3 { font-size: 1.2em; }
@@ -490,9 +419,5 @@ footer p {
         font-size: 1em;
         width: 100%; 
         box-sizing: border-box;
-    }
-    
-    .logo-container img {
-        max-height: 35px;
     }
 }
