@@ -1,37 +1,52 @@
 /* ===========================================================
-    SENIOR SMART TECH – ACCESSIBLE STYLESHEET
-    Aesthetic: Comfort & Clarity (Soft Sky Blue, Forest Green, Coral CTA)
+    SENIOR SMART TECH – ACCESSIBLE STYLESHEET (REVISED)
+    Aesthetic: Soft Pastels (Pale Blue/Green) & Your Stride Layout
 =========================================================== */
 
-/* --- GLOBAL RESET --- */
+/* --- 0. COLOR PALETTE & VARIABLES --- */
+:root {
+    /* Pale Pastel Colors (Your Stride Inspired) */
+    --color-pale-blue: #C1D9EA; /* Soft Sky Blue (Lighter than your original) */
+    --color-pale-green: #D9EAD1; /* Light, calming green */
+    --color-accent-pink: #F8E0E8; /* Soft pale pink/coral for highlights */
+
+    /* High Contrast Text Colors (For Accessibility) */
+    --color-primary-text: #212121; /* Very Dark Gray Text for MAX contrast */
+    --color-secondary-text: #666;
+    --color-forest-green: #004D40; /* Deep Forest Green for emphasis */
+    --color-coral-cta: #FF8A65; /* Bright Coral for critical CTAs */
+
+    /* Backgrounds */
+    --color-background-soft: #F5F7F8; /* Very light, soft background */
+    --color-white: #FFFFFF;
+}
+
+/* --- GLOBAL RESET & BASE TYPOGRAPHY --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* --- BASE TYPOGRAPHY & BODY --- */
 body {
-    /* NEW: Soft Sky Blue Background */
-    background-color: #E0F7FA; 
-    /* NEW: Very Dark Gray Text for MAX contrast */
-    color: #212121; 
-    /* Using a highly readable font */
-    font-family: 'Roboto', sans-serif; 
-    font-size: 1.15rem; /* Larger base font size for seniors */
-    line-height: 1.8; /* Increased line height for better scanning */
+    background-color: var(--color-background-soft); /* Soft light background */
+    color: var(--color-primary-text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.15rem; 
+    line-height: 1.6; /* Slightly reduced for Your Stride feel, still accessible */
     letter-spacing: 0.2px;
     scroll-behavior: smooth;
+    text-align: left; /* ENSURE everything defaults to left-aligned */
 }
 
-/* Headings */
+/* Headings (Left-Aligned and Dark Green) */
 h1, h2, h3, h4 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    /* NEW: Deep Forest Green */
-    color: #004D40; 
+    color: var(--color-forest-green);
     margin-bottom: 20px;
     line-height: 1.2;
+    text-align: left; /* Crucial for overriding any default centering */
 }
 
 h1 { font-size: 2.5em; }
@@ -40,73 +55,137 @@ h3 { font-size: 1.5em; }
 
 /* Links */
 a {
-    /* NEW: Deep Forest Green for links */
-    color: #004D40; 
-    text-decoration: underline;
-    text-decoration-thickness: 2px; /* Thicker underline for visibility */
+    color: var(--color-forest-green);
+    text-decoration: none;
+    text-decoration-thickness: 2px;
     transition: color 0.3s ease, opacity 0.3s ease;
 }
 a:hover {
-    color: #FF8A65; /* Coral on hover */
+    color: var(--color-coral-cta); 
+    text-decoration: underline;
     opacity: 0.9;
 }
 a:focus {
-    /* High-contrast focus ring for accessibility */
-    outline: 4px solid #F59E0B; 
+    outline: 4px solid #F59E0B;
     outline-offset: 3px;
 }
 
-/* --- HEADER --- */
-header {
-    background-color: #FFFFFF;
-    padding: 40px 5%;
-    text-align: center;
-    border-bottom: 5px solid #004D40; /* Strong border for prominence */
-    box-shadow: 0 4px 10px rgba(0, 77, 64, 0.1);
+/* --- 1. NAVIGATION BAR --- (New Element) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 10px 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-header h1 {
-    font-size: 3.2em;
-    margin-bottom: 5px;
+.navbar .logo-area {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-forest-green);
+    display: flex;
+    align-items: center;
 }
-header p {
-    /* Subtler secondary text color */
-    color: #4CAF50; 
-    font-style: italic;
-    font-size: 1.3em;
+.navbar .logo-area img {
+    height: 35px; 
+    margin-right: 10px;
 }
 
-/* --- UNIFIED CONTAINER WIDTH --- */
-section, footer {
-    max-width: 1000px;
-    margin: 50px auto;
+/* --- 2. HEADER/HERO BANNER (REVISED) --- */
+.header-hero {
+    background-color: var(--color-pale-blue); /* Soft blue backdrop */
+    padding: 60px 5%;
+    text-align: left; /* Keep text left-aligned */
+    color: var(--color-primary-text); 
+    border-bottom: 5px solid var(--color-pale-green);
+}
+.header-hero h1 {
+    font-size: 3.2em;
+    margin-bottom: 5px;
+    color: var(--color-forest-green);
+}
+.header-hero p {
+    color: var(--color-primary-text);
+    font-style: normal;
+    font-size: 1.3em;
+    font-weight: 300;
+    max-width: 800px;
+}
+
+/* --- 3. UNIFIED CONTAINER WIDTH & SECTION STYLING --- */
+main {
+    padding-bottom: 120px; /* Space for the sticky table */
+}
+
+section {
+    max-width: 1100px;
+    margin: 40px auto;
     padding: 35px;
-    /* Clean White background for clarity */
-    background: #FFFFFF; 
+    background: var(--color-white);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(33, 33, 33, 0.1);
 }
+/* Ensure the H2s look clean and Your Stride-like */
+section h2 {
+    border-bottom: 2px solid var(--color-pale-blue);
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
 
-/* --- INTRO SECTION --- */
-.intro {
+
+/* --- 4. AS SEEN BY SECTION (NEW) --- */
+.as-seen-by {
+    text-align: center;
+    padding: 30px 5%;
+    background-color: var(--color-pale-green);
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+.as-seen-by h3 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: var(--color-forest-green);
     text-align: center;
 }
-.intro h2 {
-    font-size: 2.2em;
+.logo-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.logo-container img {
+    max-height: 45px;
+    width: auto;
+    opacity: 0.8;
+    filter: grayscale(100%);
+    transition: opacity 0.3s, filter 0.3s;
+}
+.logo-container img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+
+/* --- 5. INTRO SECTION --- */
+.intro {
+    text-align: left;
 }
 .intro .lead {
     font-size: 1.3em;
-    font-weight: 700;
+    font-weight: 400; /* Softer weight */
     margin-bottom: 15px;
-    color: #004D40;
-}
-.intro p {
-    margin-bottom: 20px;
+    color: var(--color-forest-green);
 }
 
-/* --- BUTTON STYLES (High-Contrast) --- */
+/* --- 6. BUTTON STYLES (Pastel High-Contrast) --- */
 .btn-primary, .btn-secondary {
     display: inline-block;
-    color: #FFFFFF;
+    color: var(--color-primary-text); /* Dark text for contrast on pastels */
     font-weight: 700;
     padding: 14px 30px;
     border-radius: 35px;
@@ -117,143 +196,234 @@ section, footer {
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
     text-transform: uppercase;
+    text-align: center; /* Ensures text is centered within the button box */
 }
 
-/* Primary CTA: Forest Green */
+/* Primary CTA: Pale Blue */
 .btn-primary {
-    background: #004D40; 
+    background: var(--color-pale-blue);
 }
 .btn-primary:hover {
-    background: #FF8A65; /* Coral on hover */
+    background: var(--color-forest-green);
+    color: var(--color-white);
     transform: translateY(-3px);
 }
 
-/* Secondary CTA: Coral Accent */
+/* Secondary CTA: Pale Green */
 .btn-secondary {
-    background: #FF8A65; 
+    background: var(--color-pale-green);
 }
 .btn-secondary:hover {
-    background: #004D40; /* Forest Green on hover */
+    background: var(--color-coral-cta);
+    color: var(--color-white);
     transform: translateY(-3px);
 }
 
-/* --- CATEGORY GRID --- */
+/* --- 7. CATEGORY CARDS (Pastel Cards) --- */
 .category-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    text-align: center;
+    /* Removed text-align: center; */
 }
 
 .category-card {
-    border: 1px solid #E0F0E0;
-    border-radius: 10px;
+    border: none; /* Removed harsh border */
+    border-radius: 12px; /* Slightly softer corners */
     padding: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s;
-    background-color: #F8FFFF; /* Slight off-white background */
+    background-color: var(--color-pale-blue); /* Default pale blue */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+.category-card:nth-child(2) { background-color: var(--color-pale-green); }
+.category-card:nth-child(3) { background-color: var(--color-accent-pink); }
 
 .category-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 77, 64, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .category-card h3 {
-    color: #004D40;
-    font-size: 1.3em;
-    min-height: 2.6em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: var(--color-forest-green);
+    font-size: 1.4em;
+    min-height: auto;
+    align-items: flex-start; /* Left-align icon/text in card title */
+    justify-content: flex-start;
+    text-align: left;
+}
+.category-card p {
+    color: var(--color-secondary-text);
 }
 
 .category-card .icon {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin-right: 10px;
-    color: #FF8A65; /* Coral icon color */
+    color: var(--color-forest-green); 
 }
 
-/* --- METHODOLOGY/TRUST SECTION --- */
-.methodology {
-    border-left: 8px solid #FF8A65; /* Coral accent line */
-    padding-left: 30px;
-    border-radius: 15px;
-    background-color: #F8F8F8;
+/* --- 8. PRODUCT REVIEW CARDS --- */
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.product-review-card {
+    background-color: var(--color-white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+.product-review-card img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-.methodology ul {
+/* Testimonial Box (Integrated Social Proof) */
+.testimonial-box {
+    background-color: var(--color-pale-green);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 5px solid var(--color-coral-cta);
+    font-style: italic;
+    font-size: 0.95em;
+    color: var(--color-primary-text);
+}
+.testimonial-box p:last-child {
+    font-weight: 700;
+    text-align: right;
+    margin-top: 5px;
+    font-style: normal;
+}
+/* Alternating color for clarity */
+.product-review-card:nth-child(odd) .testimonial-box {
+    background-color: var(--color-pale-blue);
+}
+
+/* --- 9. COMPARISON TABLE (Standard) --- */
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+.table-wrapper th, .table-wrapper td {
+    padding: 15px 10px;
+    text-align: center;
+    border: 1px solid #EEE;
+}
+.table-wrapper th {
+    background-color: var(--color-pale-green);
+    color: var(--color-forest-green);
+    font-weight: 700;
+}
+.table-wrapper tr:nth-child(even) {
+    background-color: var(--color-pale-blue);
+}
+.table-wrapper tr:nth-child(odd) {
+    background-color: var(--color-white);
+}
+
+
+/* --- 10. STICKY COMPARISON TABLE (FIXED FOOTER BAR) --- */
+.sticky-table-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-forest-green); /* Darker background for visibility */
+    border-top: 5px solid var(--color-coral-cta);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 10px 0;
+    overflow-x: auto; 
+}
+.sticky-table {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+.sticky-table thead th {
+    font-weight: 400;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    background-color: var(--color-coral-cta);
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+.sticky-table td {
+    padding: 8px 10px;
+    vertical-align: middle;
+    color: var(--color-white);
+}
+.sticky-table .btn-buy {
+    background-color: var(--color-pale-green); 
+    color: var(--color-primary-text);
+    padding: 6px 12px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    border-radius: 6px;
+    font-weight: 700;
+}
+.sticky-table .btn-buy:hover {
+    background-color: var(--color-pale-blue);
+    text-decoration: none;
+}
+.sticky-table .buy-col {
+    padding: 8px 5px;
+}
+/* Zebra striping for sticky table */
+.sticky-table tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.sticky-table tr:nth-child(odd) td {
+    background-color: transparent;
+}
+
+
+/* --- 11. FAQ Section --- */
+.faq ul {
     list-style: none;
     padding: 0;
 }
-
-.methodology li {
-    margin-bottom: 15px;
-    padding: 10px 0;
-    font-size: 1.05em;
-    /* NEW: Very Dark Gray Text */
-    color: #212121; 
-}
-
-.methodology li strong {
-    color: #004D40; /* Forest Green emphasis */
-    font-weight: 700;
-}
-
-/* --- FEATURED REVIEW --- */
-.featured-review {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 30px;
-    background: #E0F7FA; /* Soft Sky Blue background */
-    border: 3px solid #004D40;
-}
-
-.featured-review img {
-    flex: 1 1 300px;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.featured-review .review-text {
-    flex: 2 1 400px;
-    padding: 10px 0;
-}
-
-.featured-review h2 {
-    width: 100%;
+.faq li {
+    background: var(--color-white);
+    padding: 15px;
     margin-bottom: 10px;
-    color: #212121;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-size: 1.05em;
+    border-left: 5px solid var(--color-pale-green);
+}
+.faq li strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-forest-green);
+}
+.faq li span {
+    color: var(--color-secondary-text);
 }
 
-.featured-review p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-}
 
-.cta-coral {
-    /* Specifically ensure the CTA is the Coral color in this section for contrast */
-    background: #FF8A65; 
-    border: 2px solid #E0F7FA;
-}
-.cta-coral:hover {
-    background: #F59E0B; /* Warm Orange for contrast */
-}
-
-/* --- FOOTER --- */
+/* --- 12. FOOTER --- */
 footer {
     text-align: center;
-    background: #004D40; /* Deep Forest Green Footer */
-    color: #FFFFFF;
+    background: var(--color-forest-green); 
+    color: var(--color-white);
     padding: 30px 20px;
     margin-top: 50px;
-    border-radius: 0; /* Remove top border-radius for full width effect */
+    border-radius: 0; 
 }
 
 footer p {
@@ -263,28 +433,17 @@ footer p {
 
 .disclosure {
     font-size: 0.9rem;
-    color: #90CAF9; /* Soft light blue disclosure text */
+    color: #C1D9EA; /* Pale blue disclosure text */
 }
 
 /* =================================================================
     RESPONSIVE DESIGN (Adjusted for larger text)
 ================================================================= */
 
-@media (max-width: 1024px) {
-    body {
-        font-size: 1.1rem;
-    }
-    
-    section, footer {
-        margin: 30px 15px;
-        padding: 30px 20px;
-    }
-
-    header h1 {
-        font-size: 2.5em;
-    }
-    header p {
-        font-size: 1.1em;
+@media (max-width: 1150px) {
+    section {
+        max-width: 90%;
+        margin: 40px auto;
     }
 }
 
@@ -296,26 +455,24 @@ footer p {
     h1 { font-size: 2.2em; }
     h2 { font-size: 1.7em; }
     h3 { font-size: 1.3em; }
-
-    .category-grid {
+    
+    .header-hero {
+        padding: 40px 5%;
+    }
+    .header-hero h1 {
+        font-size: 2.5em;
+    }
+    
+    .category-grid, .review-grid {
         gap: 20px;
     }
 
-    .category-card {
-        padding: 20px;
+    .as-seen-by {
+        padding: 20px 5%;
     }
     
-    .featured-review {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .featured-review img {
-        max-width: 100%;
-    }
-
-    .featured-review .review-text {
-        padding: 0;
+    .sticky-table-wrapper {
+        padding: 5px 0;
     }
 }
 
@@ -328,14 +485,14 @@ footer p {
     h2 { font-size: 1.5em; }
     h3 { font-size: 1.2em; }
     
-    header {
-        padding: 30px 5%;
-    }
-
     .btn-primary, .btn-secondary {
-        padding: 12px 24px;
+        padding: 12px 20px;
         font-size: 1em;
-        width: 100%; /* Full width buttons for easy tapping */
+        width: 100%; 
         box-sizing: border-box;
+    }
+    
+    .logo-container img {
+        max-height: 35px;
     }
 }
