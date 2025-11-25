@@ -1,104 +1,174 @@
 /* ===========================================================
-    SENIOR SMART TECH – ACCESSIBLE STYLESHEET (V4: MINIMALIST & STRIPPED DOWN)
-    Aesthetic: Clean, High-Trust, White/Soft Pastel, Gold Accents.
+    SENIOR SMART TECH – ACCESSIBLE STYLESHEET (V5: FINAL MINIMALIST REFINEMENT)
+    Aesthetic: Clean Arial, Soft Pastels, Gold Accents, Vertical Scroll.
 =========================================================== */
 
-/* --- 0. COLOR PALETTE & VARIABLES (SOFTENED HEADERS) --- */
+/* --- 0. COLOR PALETTE & VARIABLES --- */
 :root {
     /* Base Pastel Colors */
-    --color-pale-blue: #D7E7F0;      /* Table Stripe 1 / Soft Action Background */
-    --color-pale-green: #E4F0E2;     /* Table Header / Button Background */
-    --color-soft-peach: #FCEFE9;     /* Trust Section Background */
+    --color-pale-blue: #D7E7F0;      
+    --color-pale-green: #E4F0E2;     
+    --color-soft-peach: #FCEFE9;     
 
-    /* High Contrast & Trust Colors (New Palette) */
-    --color-primary-text: #212121;   /* Very Dark Gray */
-    --color-authoritative-dark: #0B2F44; /* Deep Navy (Used sparingly: logo, fixed table background) */
-    --color-soft-header-dark: #4A637A; /* New Softer Dark Blue/Gray for Headings */
+    /* Trust Colors */
+    --color-primary-text: #212121;
+    --color-authoritative-dark: #0B2F44; /* Deep Navy */
+    --color-soft-header-dark: #4A637A; /* Softer Dark Blue/Gray for Headings */
     --color-accent-gold: #FFD700;    /* Bright Gold for Star Ratings */
     --color-white: #FFFFFF;
+    --color-light-gray-border: #D1D5DB; /* For clean white button borders */
 }
 
-/* --- GLOBAL TYPOGRAPHY (Softened Headers) --- */
+/* --- GLOBAL TYPOGRAPHY --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background-soft);
+    color: var(--color-primary-text);
+    font-family: Arial, sans-serif; /* Changed to Arial/Sans-serif */
+    font-size: 1.1rem; /* Slightly smaller base font */
+    line-height: 1.6; 
+    scroll-behavior: smooth;
+}
+
+/* Headings (Using soft header color) */
 h1, h2, h3, h4, p, li {
     text-align: left;
-    color: var(--color-soft-header-dark); /* Using the new soft header color */
+    color: var(--color-soft-header-dark); 
     line-height: 1.2;
 }
+
 strong {
-    font-weight: 700; /* Ensuring strong tag works as requested */
+    font-weight: 700; /* Ensures strong tag works */
+    color: var(--color-authoritative-dark); /* Highlighted text is dark navy */
 }
-/* Gold Stars for Ratings */
 .star-rating {
     color: var(--color-accent-gold); 
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
-/* --- 2. HEADER/HERO BANNER (Minimal Image/Text Split) --- */
+/* --- 1. NAVIGATION BAR --- */
+.navbar {
+    padding: 15px 5%; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.navbar .logo-area {
+    font-size: 0; /* Hide the "Senior Smart Tech" text here */
+}
+.navbar .logo-area img {
+    height: 35px;
+}
+
+/* --- 2. HEADER/HERO BANNER (Blurb Restored, Title Centered-Right) --- */
 .header-hero {
-    display: flex; /* Enable Flexbox for side-by-side content */
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 5%; /* Very minimal padding */
+    padding: 35px 5%; 
     border-bottom: 5px solid var(--color-pale-blue);
-    background-color: var(--color-white);
 }
 .header-text {
-    flex-grow: 1;
-    padding-left: 20px;
+    flex: 1; /* Takes up remaining space */
+    padding-left: 30px;
 }
 .header-image {
-    max-width: 40%;
+    max-width: 30%; /* Image occupies left third */
     height: auto;
-    border-radius: 10px;
+    border-radius: 8px;
     object-fit: cover;
 }
-.header-hero h1 {
-    font-size: 2.2em;
-    margin: 0;
-    color: var(--color-authoritative-dark); /* Logo/Main title can be stronger */
+.header-text h1 {
+    font-size: 1.8em;
+    color: var(--color-authoritative-dark); 
+    margin-bottom: 5px;
 }
-/* Removed the blurb paragraph here */
+.header-text p {
+    font-size: 1.1em;
+    color: var(--color-secondary-text);
+    font-weight: 300;
+}
 
-
-/* --- 3. UNIFIED CONTAINER & SECTION STYLING (Table is Full Width) --- */
+/* --- 3. SECTIONS (General) --- */
 section {
     max-width: 1100px;
-    margin: 50px auto;
-    padding: 40px;
-    background: var(--color-white);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(33, 33, 33, 0.08);
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 8px;
 }
-/* Full width for the Comparison Table section */
-.comparison-table {
-    max-width: 100%; 
-    border-radius: 0;
-}
-.comparison-table h2 {
-    max-width: 1100px; /* Center the title, but keep table wide */
-    margin: 0 auto 25px;
-    padding: 0 20px;
+section h2 {
+    border-bottom: 2px solid var(--color-pale-blue);
+    padding-bottom: 5px;
 }
 
-/* --- 5. BUTTON STYLES (Clean White, Pale Green for Table Buttons) --- */
-.btn-primary, .btn-buy, .btn-secondary {
-    display: inline-block;
-    color: var(--color-authoritative-dark); 
-    font-weight: 400; /* Thinner font weight */
-    padding: 8px 16px; /* Smaller padding */
-    border-radius: 4px; /* Maintaining blocky shape */
-    margin-top: 5px;
-    font-size: 0.9em; 
-    border: 1px solid var(--color-soft-header-dark); /* Soft border */
-    transition: all 0.3s ease;
-    text-transform: none;
+
+/* --- 4. INTRO/PERFECT FIT SECTION (RESTORED, NO ASTERISKS, NO BUTTONS) --- */
+.intro .lead {
+    font-size: 1.2em;
+    color: var(--color-authoritative-dark);
+}
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+.intro-card {
+    border-radius: 6px;
+    padding: 20px;
+    background-color: var(--color-pale-blue);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.intro-card:nth-child(2) { background-color: var(--color-pale-green); }
+.intro-card:nth-child(3) { background-color: var(--color-soft-peach); }
+.intro-card h3 {
+    color: var(--color-authoritative-dark);
+    margin-bottom: 5px;
 }
 
-/* Product Card CTA: White button, Darker border/hover */
+
+/* --- 5. CORE BENEFIT CARDS (KEEP, NO BUTTONS) --- */
+.benefit-grid {
+    grid-template-columns: repeat(3, 1fr); /* Explicitly three cards */
+    gap: 20px;
+    margin-top: 20px;
+}
+.benefit-card {
+    border-radius: 6px;
+    padding: 20px;
+    /* Ensure colors are correct: Blue, Green, Peach */
+}
+.benefit-card:nth-child(1) { background-color: var(--color-pale-blue); }
+.benefit-card:nth-child(2) { background-color: var(--color-pale-green); }
+.benefit-card:nth-child(3) { background-color: var(--color-soft-peach); }
+
+
+/* --- 6. PRODUCT REVIEW CARDS (4-ACROSS, WHITE BUTTONS) --- */
+.review-grid-section {
+    max-width: 1200px; /* Wider container for 4 cards */
+    margin: 40px auto;
+}
+.review-grid {
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px; /* Reduced gap */
+}
+.product-review-card {
+    padding: 12px; 
+}
+.product-review-card img {
+    max-height: 160px; 
+}
+
+/* White Buy Now Button (on Product Cards) */
 .btn-primary {
     background: var(--color-white); 
-    border-color: var(--color-soft-header-dark);
+    border-color: var(--color-light-gray-border); /* Light gray border */
     color: var(--color-soft-header-dark);
+    font-weight: 400; /* Thin font */
+    padding: 6px 14px;
 }
 .btn-primary:hover {
     background: var(--color-soft-header-dark);
@@ -106,125 +176,116 @@ section {
     border-color: var(--color-soft-header-dark);
 }
 
-/* Table/Comparison CTA: Pale Green button */
-.comparison-table .btn-primary {
-    background: var(--color-pale-green); /* Pale Green Button color */
-    border-color: var(--color-pale-green);
-    color: var(--color-authoritative-dark);
-}
-.comparison-table .btn-primary:hover {
-    background: var(--color-pale-blue);
-    border-color: var(--color-pale-blue);
-    color: var(--color-authoritative-dark);
-}
 
-/* Core Benefit Cards: REMOVE BUTTONS (Handled in HTML) */
-
-
-/* --- 7. PRODUCT REVIEW CARDS (4 SMALL VERTICAL CARDS) --- */
-.review-grid {
-    display: grid;
-    /* Adjusted to handle 4 columns in one row */
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; /* Reduced gap */
-}
-.product-review-card {
-    padding: 15px; /* Smaller padding for smaller cards */
-}
-.product-review-card img {
-    max-height: 180px; /* Make images smaller/taller */
-}
-.product-review-card h3 {
-    font-size: 1.2em; /* Smaller title font */
-    min-height: 3em; /* Ensure card titles don't cause height mismatch */
-}
-
-/* --- 8. CUSTOMER SUCCESS (HORIZONTAL SCROLLING STRIP) --- */
-.customer-success {
-    background-color: var(--color-soft-peach);
-    border-left: none;
-    padding: 20px 0; /* Reduced vertical padding */
+/* --- 7. COMPARISON TABLE (FULL WIDTH, GOLD STARS, WHITE BUTTONS, NO FOOTER BUTTON) --- */
+.comparison-table {
+    padding: 0; /* Remove padding here as table extends full width */
+    border-radius: 0;
     box-shadow: none;
-    max-width: 100%;
-    margin: 40px auto;
+    background: var(--color-background-soft);
+    max-width: 100%; /* Full screen width */
 }
-.customer-success h2 {
-    max-width: 1100px;
-    margin: 0 auto 15px;
-    padding: 0 40px;
+.comparison-table h2 {
+    max-width: 1100px; 
+    margin: 0 auto 25px;
+    padding: 0 5%;
 }
-.customer-review-list {
-    display: flex; /* Enables horizontal scrolling */
-    flex-wrap: nowrap;
-    overflow-x: scroll; /* Crucial for scrolling effect */
-    -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
-    gap: 30px;
-    padding: 0 40px 20px 40px; /* Added horizontal padding for scroll visibility */
-}
-.customer-review-list li {
-    flex: 0 0 350px; /* Fixed width for scrolling cards */
-    padding: 20px;
-    border-radius: 8px;
-}
-
-
-/* --- 9. COMPARISON TABLE (Full Width, Gold Stars, Pale Green Buttons) --- */
 .table-wrapper {
     max-width: 100%;
+    overflow-x: auto; /* Ensure horizontal scroll if table is too wide */
 }
-.table-wrapper th {
-    background-color: var(--color-pale-green); /* Header is soft green */
-    color: var(--color-authoritative-dark);
+.table-wrapper table {
+    min-width: 700px; /* Ensure minimum width for columns */
 }
 .table-wrapper tr:nth-child(even) {
-    background-color: var(--color-pale-blue); /* Stripe 1: Pale Blue */
+    background-color: var(--color-pale-blue); /* Pale Blue Stripe */
 }
 .table-wrapper tr:nth-child(odd) {
-    background-color: var(--color-white); /* Stripe 2: White */
-}
-/* Full width table cells */
-.table-wrapper th, .table-wrapper td {
-    padding: 10px 10px;
+    background-color: var(--color-white); /* White Stripe */
 }
 
+/* White Buy Now Button (on Table) */
+.comparison-table .btn-primary {
+    background: var(--color-white);
+    border-color: var(--color-light-gray-border); 
+    color: var(--color-soft-header-dark);
+}
+.comparison-table .btn-primary:hover {
+    background: var(--color-soft-header-dark);
+    color: var(--color-white);
+}
 
-/* --- 10. FIXED COMPARISON TABLE (REMOVED: Handled in HTML) --- */
+/* --- 8. CUSTOMER SUCCESS (VERTICAL SCROLLING/FAQ STYLE) --- */
+.customer-success {
+    background-color: var(--color-soft-peach);
+    max-width: 1100px; /* Max width 1100px */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(33, 33, 33, 0.08); 
+    margin: 50px auto; /* Correct placement above footer */
+}
 
+.customer-review-list {
+    display: block; /* Vertical list structure */
+    max-height: 400px; /* Fixed height */
+    overflow-y: scroll; /* Vertical scrolling */
+    -webkit-overflow-scrolling: touch; 
+    padding: 0; 
+    border-top: 1px solid rgba(11, 47, 68, 0.1); /* Separator line */
+}
 
-/* --- 11. FOOTER (Small text) --- */
+.customer-review-list li {
+    padding: 15px 0;
+    border-bottom: 1px dashed rgba(11, 47, 68, 0.1); 
+    margin-left: 0;
+    list-style: none;
+    font-size: 1em;
+}
+.customer-review-list li:last-child {
+    border-bottom: none;
+}
+.customer-review-list li .quote {
+    font-style: italic;
+    color: var(--color-authoritative-dark);
+    margin-bottom: 5px;
+}
+.customer-review-list li .source {
+    display: block;
+    text-align: right;
+    font-weight: 400;
+    color: var(--color-soft-header-dark);
+    font-size: 0.9em;
+}
+
+/* --- 9. FOOTER --- */
 footer {
-    padding: 15px 20px;
+    padding: 10px 20px; /* Reduced footer height */
+    text-align: center;
 }
 .disclosure {
-    font-size: 0.8rem; /* Smaller disclosure text */
+    font-size: 0.75rem; /* Very small disclosure text */
 }
 
-/* =================================================================
-    RESPONSIVE DESIGN 
-================================================================= */
+/* --- RESPONSIVENESS --- */
 @media (max-width: 1000px) {
     .review-grid {
-        /* Fall back to 2 columns on smaller screens */
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr); /* Fall back to 2 columns */
     }
 }
 @media (max-width: 768px) {
+    .header-image {
+        max-width: 40%;
+    }
+}
+@media (max-width: 600px) {
     .header-hero {
         flex-direction: column;
+        text-align: center;
     }
     .header-image {
-        max-width: 100%;
-        order: -1;
-        margin-bottom: 20px;
+        max-width: 60%;
+        margin-bottom: 15px;
     }
     .header-text {
         padding: 0;
-        text-align: center;
-    }
-    .review-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-    .customer-review-list li {
-        flex: 0 0 80vw;
     }
 }
