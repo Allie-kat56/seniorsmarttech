@@ -152,19 +152,28 @@ section h2 {
 }
 
 /* White Buy Now Button (on Product Cards) */
+/* --- PREMIUM REFINED BUTTONS --- */
 .btn-primary {
-    background: var(--color-white); 
-    border-color: var(--color-light-gray-border); /* Light gray border */
-    color: var(--color-soft-header-dark);
-    font-weight: 400; /* Thin font */
-    padding: 6px 14px;
-}
-.btn-primary:hover {
-    background: var(--color-soft-header-dark);
-    color: var(--color-white);
-    border-color: var(--color-soft-header-dark);
+    display: inline-block;
+    background: transparent;
+    color: var(--color-authoritative-dark);
+    border: 1.5px solid var(--color-authoritative-dark);
+    padding: 12px 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border-radius: 2px; /* Slight rounding for polish, not an oval */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btn-primary:hover {
+    background: var(--color-authoritative-dark);
+    color: var(--color-white);
+    transform: translateY(-2px); /* Subtle "lift" effect */
+    box-shadow: 0 4px 10px rgba(11, 47, 68, 0.15);
+}
 
 /* --- 7. COMPARISON TABLE (FULL WIDTH, GOLD STARS, WHITE BUTTONS, NO FOOTER BUTTON) --- */
 .comparison-table {
