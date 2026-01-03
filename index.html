@@ -9,16 +9,30 @@
 </head>
 <body>
 
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">Senior SmartTech</a>
+            <ul class="nav-links">
+                <li><a href="#comparison">Best Deals</a></li>
+                <li><a href="#vitality">Vitality Station</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="hero">
         <div class="container">
             <h1>Wearable Tech Built for Peace of Mind</h1>
-            <p>Simple, reliable, and life-saving reviews for senior safety.</p>
+            <p>Simple, reliable, and life-saving reviews designed specifically for senior safety and health tracking.</p>
+            <a href="#comparison" class="cta-main">View Vitality Specs</a>
         </div>
     </header>
 
-    <section class="comparison-section">
+    <section id="comparison" class="comparison-section">
         <div class="container">
-            <h2>Top Recommended Devices for 2026</h2>
+            <div class="section-intro">
+                <h2>Top Recommended Devices for 2026</h2>
+                <p>We've hand-picked these devices for their ease of use, reliability, and essential health features.</p>
+            </div>
             <div class="table-wrapper">
                 <table class="comparison-table">
                     <thead>
@@ -69,32 +83,47 @@
     <main class="container">
         <div class="feature-grid">
             <div class="card">
-                <img src="images/smartwatch_senior_man.jpg" alt="Senior man using fall detection">
+                <div class="card-img-container">
+                    <img src="images/smartwatch_senior_man.jpg" alt="Senior man using fall detection">
+                </div>
                 <h3>Active Safety</h3>
-                <p>Rock-solid fall detection and GPS sharing.</p>
+                <p>Experience rock-solid fall detection and GPS location sharing that keeps you connected to family, wherever you wander.</p>
             </div>
             <div class="card">
-                <img src="images/smartwatch_senior_woman.jpg" alt="Senior woman monitoring wellness">
+                <div class="card-img-container">
+                    <img src="images/smartwatch_senior_woman.jpg" alt="Senior woman monitoring wellness">
+                </div>
                 <h3>Wellness & Connection</h3>
-                <p>Track heart rate and sleep with ease.</p>
+                <p>Track heart rate, sleep quality, and medication reminders on lightweight devices that feel like a second skin.</p>
             </div>
         </div>
+
+        <section id="vitality" class="vitality-highlight">
+            <h2>The Vitality Station: Beyond Just Weight</h2>
+            <p>Longevity is about more than a number on a scale. We focus on <strong>Bone Density</strong> and <strong>Muscle Mass</strong> to help you maintain strength and independence.</p>
+        </section>
     </main>
 
-    <footer class="container faq-section">
-        <h2>Common Questions</h2>
-        <div itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Which smartwatch has the best fall detection for seniors?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">The Apple Watch Series 10 and Samsung Galaxy Watch 7 are the gold standards for algorithm-based fall detection.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+                <h2>Common Questions</h2>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Which smartwatch has the best fall detection for seniors?</h3>
+                    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The Apple Watch Series 10 and Samsung Galaxy Watch 7 are the gold standards for algorithm-based fall detection.</p>
+                    </div>
                 </div>
             </div>
+            
+            <hr>
+            <p class="affiliate-disclosure"><em>Disclosure: Senior SmartTech is a reader-supported site. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.</em></p>
+            <p>&copy; 2026 Senior SmartTech. Human-centric design for an empowered life.</p>
         </div>
     </footer>
 
     <div class="sticky-cta">
-        <p>Ready to stay safe? <a href="#comparison">View Top Deals</a></p>
+        <p>Stay Safe & Connected <a href="#comparison">Compare Top Deals</a></p>
     </div>
 
 </body>
