@@ -3,13 +3,13 @@
     SENIOR SMART TECH – MODERN SANCTUARY PRODUCTION CSS
     Palette: Sage (#A2AC94), Charcoal (#6C6865), White (#FFFFFF)
 =========================================================== */
-/* MASTER TECHNICAL SPECIFICATION V8.0 - HEADER FIX */
+/* MASTER SPECIFICATION V9.0 */
 :root {
     --navy: #0B1D32;
     --gold: #D4AF37;
     --charcoal: #333333;
     --white: #FFFFFF;
-    --soft-gray: #F8F9FA;
+    --gray: #F4F4F4;
 }
 
 * { box-sizing: border-box; }
@@ -17,154 +17,108 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 18px;
-    line-height: 1.6;
-    color: var(--charcoal);
-    background-color: var(--white);
     margin: 0;
-    padding-top: 110px; /* Offset for 90px header + breathing room */
-    padding-bottom: 120px; /* Offset for footer */
+    color: var(--charcoal);
+    background: var(--white);
+    padding-top: 140px; /* Header 120px + Gap */
+    padding-bottom: 150px; /* Footer Stack height */
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
+.container { max-width: 1300px; margin: 0 auto; padding: 0 30px; }
 
-/* REFINED FIXED HEADER */
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* FIXED 120px HEADER */
+.main-header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 90px;
-    background-color: var(--navy);
+    height: 120px;
+    background: var(--navy);
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
 }
 
-.header-inner {
-    width: 100%;
+.header-grid {
     display: flex;
-    justify-content: center; /* CENTRES LOGO */
-    align-items: center;
+    justify-content: center;
+    width: 100%;
     position: relative;
 }
 
-.header img.logo {
-    height: 60px; /* FIXED HEIGHT TO PREVENT SQUASHING */
-    width: auto;   /* AUTO WIDTH TO PRESERVE WIDE LOGO ASPECT RATIO */
-    display: block;
-}
+.logo-large { height: 80px; width: auto; }
 
 .nav-right {
     position: absolute;
-    right: 30px; /* PINNED TO THE RIGHT */
-    display: flex;
-    gap: 25px;
+    right: 30px;
 }
 
 .nav-right a {
     color: var(--white);
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px; /* ACCESSIBILITY REQUIREMENT */
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    margin-left: 20px;
 }
 
-/* HERO SECTION - ZERO WHITE SPACE */
-.hero-white { padding: 60px 0; }
-.hero-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: center; }
+/* SIDEBAR LAYOUT (70/30) */
+.main-layout { display: flex; gap: 40px; }
+.content-left { flex: 0 0 70%; }
+.sidebar-right { flex: 0 0 30%; }
 
-.hero-text h1 { font-size: 3rem; color: var(--navy); line-height: 1.1; margin-bottom: 20px; }
-.btn-navy { display: inline-block; background: var(--navy); color: var(--white); padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; }
-
-.hero-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-.hero-card { border-radius: 12px; overflow: hidden; height: 242px; background: var(--soft-gray); }
-.card-tall { grid-row: span 2; height: 500px; }
-
-.img-fill {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* FORCES FILL, NO GAPS */
-    display: block;
+.sidebar-scroll {
+    position: sticky;
+    top: 140px;
+    height: 80vh;
+    overflow-y: auto;
+    background: var(--gray);
+    padding: 25px;
+    border-radius: 12px;
 }
 
+/* HERO GALLERY */
+.hero-text h1 { font-size: 3rem; color: var(--navy); }
+.hero-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px; }
+.card { height: 250px; border-radius: 12px; overflow: hidden; }
+.card-tall { grid-row: span 2; height: 515px; }
+.img-fill { width: 100%; height: 100%; object-fit: cover; display: block; }
 .man-watch { object-position: center 80%; }
 
-/* AFFILIATE TABLE */
-.white-card.shadow {
-    padding: 40px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.06);
-    margin: 40px 0;
-}
-
+/* TABLE RECOVERY */
+.white-card.shadow { padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
 .comparison-table { width: 100%; border-collapse: collapse; }
-.comparison-table th { background: var(--soft-gray); padding: 15px; text-align: left; }
-.comparison-table td { padding: 15px; border-bottom: 1px solid #EEE; }
+.comparison-table th { text-align: left; padding: 15px; border-bottom: 2px solid var(--navy); }
+.comparison-table td { padding: 15px; border-bottom: 1px solid #ddd; }
+.prod { display: flex; align-items: center; gap: 10px; font-weight: bold; }
+.thumb { width: 40px; height: 40px; background: #ccc; border-radius: 4px; }
 .stars { color: var(--gold); }
 
 /* BUTTONS */
-.btn-ghost {
-    display: inline-block;
-    border: 2px solid var(--gold);
-    color: var(--navy);
-    padding: 8px 18px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-}
+.btn-navy { display: inline-block; background: var(--navy); color: white; padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; }
+.btn-ghost { border: 2px solid var(--gold); color: var(--navy); padding: 8px 15px; text-decoration: none; font-weight: bold; border-radius: 4px; }
+.btn-gold { background: var(--gold); color: var(--navy); padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; margin-left: 20px; }
 
-.btn-gold {
-    background: var(--gold);
-    color: var(--navy);
-    padding: 12px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-}
+/* SIDEBAR ELEMENTS */
+.speech-bubble { background: white; padding: 15px; border-radius: 10px; margin-bottom: 20px; border-left: 5px solid var(--gold); }
+.speech-bubble p { margin: 0; font-style: italic; }
+.speech-bubble cite { display: block; margin-top: 5px; font-weight: bold; font-size: 14px; }
 
-/* SCROLLABLE BOX */
-.scroll-box { max-height: 500px; overflow-y: auto; background: var(--soft-gray); padding: 40px; border-radius: 12px; border: 1px solid #EEE; }
-
-/* FIXED FOOTER STACK */
+/* FIXED TRIPLE STACK FOOTER */
 .fixed-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     background: var(--navy);
-    color: var(--white);
-    padding: 15px 0;
+    color: white;
+    padding: 20px 0;
     z-index: 1000;
+    text-align: center;
 }
 
-.footer-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.footer-text-group { text-align: center; }
-.footer-line-1 { font-weight: bold; margin-bottom: 4px; }
-.footer-line-2 { font-size: 12px; opacity: 0.8; }
-
-.footer-pinned-cta {
-    position: absolute;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.choice-label { font-size: 0.9rem; font-weight: bold; }
+.footer-stack div { margin-bottom: 8px; }
+.footer-line-1 { font-size: 1.3rem; }
+.footer-line-3 { font-size: 12px; opacity: 0.7; }
 
 @media (max-width: 1024px) {
-    .hero-layout { grid-template-columns: 1fr; text-align: center; }
-    .nav-right, .footer-pinned-cta { position: static; transform: none; margin-top: 15px; }
-    .header { height: auto; padding: 20px 0; }
-    .body { padding-top: 180px; }
+    .main-layout { flex-direction: column; }
+    .content-left, .sidebar-right { flex: 100%; }
+    .sidebar-scroll { height: auto; position: static; }
 }
