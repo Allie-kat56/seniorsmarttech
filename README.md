@@ -39,4 +39,4 @@ This site focuses on reviewing and comparing **smartwatches for seniors**, with 
 - [ ] Add YouTube channel integration
 
 ---
-© 2025 SeniorSmartTech – Part of k8reviews.com
+© 2025 SeniorSmartTech – Part of k8reviews.com 
