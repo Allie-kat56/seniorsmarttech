@@ -2,4 +2,4 @@
   <circle cx="50" cy="50" r="30" fill="none" stroke="#D4AF37" stroke-width="4"/>
   <path d="M30 50 h15 l5 -15 l5 30 l5 -15 h15" fill="none" stroke="#D4AF37" stroke-width="3"/>
   <text x="100" y="60" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#FFFFFF">Senior SmartTech</text>
-</svg>>
+</svg>
