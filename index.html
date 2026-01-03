@@ -3,93 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior SmartTech | Empowering Independence</title>
+    <meta name="description" content="Senior Smart Tech: Expert-led guidance on senior wearables, fall detection, and bone density monitoring via the Vitality Station.">
+    <title>Senior Smart Tech | Wearables & Vitality Monitoring</title>
+    
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="site.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Which smartwatch has the best fall detection for seniors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Apple Watch Series 10 and Samsung Galaxy Watch 7 currently lead the market in fall detection reliability. These devices use integrated accelerometers to detect rapid impact and can automatically initiate emergency calls if the wearer is unresponsive for 60 seconds."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can a smartwatch monitor bone density?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Currently, smartwatches cannot directly measure bone density from the wrist. However, our Vitality Station uses Bioelectrical Impedance Analysis (BIA) technology to track bone mineral content and muscle mass, syncing these critical health metrics directly to your wearable device for a holistic view of skeletal health."
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container nav-content">
-            <a href="#" class="logo">Senior SmartTech</a>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="container">
+            <img src="images/logo.jpg" alt="Senior Smart Tech Logo" class="logo">
         </div>
     </nav>
 
     <header class="hero">
-        <div class="container hero-split">
-            <div class="hero-text">
+        <div class="container hero-grid">
+            <div class="hero-content">
                 <h1>Wearable Tech Built for Peace of Mind</h1>
-                <p>Simple, reliable, and life-saving reviews designed specifically for senior safety and health tracking.</p>
-                <a href="#comparison" class="cta-hero-button">View Vitality Specs</a>
+                <p>Simple, reliable, and life-saving. We review the latest smartwatches designed specifically for senior safety and health tracking.</p>
+                <a href="#vitality" class="btn-primary">View Vitality Specs</a>
             </div>
-            <div class="hero-image">
-                <img src="images/smartwatch_closeup.jpg" alt="Senior wrist with smartwatch">
+            <div class="hero-image-container">
+                <img src="images/smartwatch_closeup.jpg" alt="Close-up of a senior wearing a high-contrast smartwatch" class="img-responsive">
             </div>
         </div>
     </header>
 
     <main class="container">
-        <div class="feature-grid">
-            <div class="card">
-                <img src="images/smartwatch_senior_man.jpg" alt="Senior man looking at watch">
-                <h3>Active Safety</h3>
-                <p>Experience rock-solid fall detection and GPS location sharing that keeps you connected to family.</p>
-            </div>
-            <div class="card">
-                <img src="images/smartwatch_senior_woman.jpg" alt="Senior woman looking at watch">
-                <h3>Wellness & Connection</h3>
-                <p>Track heart rate, sleep quality, and medication reminders on lightweight devices that feel like a second skin.</p>
-            </div>
-        </div>
-
-        <section id="vitality" class="vitality-highlight">
-            <h2>The Vitality Station: Beyond Just Weight</h2>
-            <p>Longevity is about more than a number on a scale. We focus on <strong>Bone Density</strong> and <strong>Muscle Mass</strong> to help you maintain strength and independence.</p>
-        </section>
-
-        <section id="comparison" class="comparison-section">
-            <h2>Top Recommended Devices for 2026</h2>
-            <div class="table-wrapper">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Senior Benefit</th>
-                            <th>Rating</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><strong>Apple Watch SE</strong></td><td>Best Fall Detection</td><td>⭐⭐⭐⭐★</td><td><a href="#" class="cta-table">See Best Deal</a></td></tr>
-                        <tr><td><strong>Samsung Galaxy Watch</strong></td><td>Blood Pressure</td><td>⭐⭐⭐⭐★</td><td><a href="#" class="cta-table">See Best Deal</a></td></tr>
-                        <tr><td><strong>Fitbit Versa 3</strong></td><td>Battery Life</td><td>⭐⭐⭐⭐☆</td><td><a href="#" class="cta-table">See Best Deal</a></td></tr>
-                        <tr><td><strong>Hume Vitality Scale</strong></td><td>Muscle & Bone</td><td>⭐⭐⭐⭐⭐</td><td><a href="#" class="cta-table">See Best Deal</a></td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <h2>Common Questions</h2>
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Which smartwatch has the best fall detection?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">The Apple Watch Series 10 and Samsung Galaxy Watch 7 are the gold standards.</p>
+        
+        <section class="features-section">
+            <div class="grid-two">
+                <div class="feature-card">
+                    <img src="images/smartwatch_senior_man.jpg" alt="Senior man walking outdoors with fall detection watch" class="feature-img">
+                    <h3>Active Safety</h3>
+                    <p>Experience rock-solid fall detection and GPS location sharing that keeps you connected to family, wherever you wander.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/smartwatch_senior_woman.jpg" alt="Senior woman relaxing with wellness monitoring watch" class="feature-img">
+                    <h3>Wellness & Connection</h3>
+                    <p>Track heart rate, sleep quality, and medication reminders on lightweight devices that feel like a second skin.</p>
                 </div>
             </div>
         </section>
+
+        <section id="vitality" class="vitality-station-section">
+            <div class="vitality-container">
+                <div class="vitality-header">
+                    <h2>The Vitality Station: Beyond Just Weight</h2>
+                    <p>Longevity is about more than a number on a scale. We focus on **Bone Density** and **Muscle Mass** to help you maintain strength and independence.</p>
+                </div>
+                <div class="vitality-placeholder">
+                    <div class="placeholder-box">
+                        <p>[ Vitality Station Scale Image Placeholder ]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <hr class="separator">
+            <h2>Common Questions</h2>
+            <div class="faq-item">
+                <h3>Which smartwatch has the best fall detection for seniors?</h3>
+                <p>The <strong>Apple Watch Series 10</strong> and <strong>Samsung Galaxy Watch 7</strong> are the gold standards. They feature sophisticated algorithms that differentiate between a heavy trip and a dangerous fall, providing an essential safety net.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can a smartwatch monitor bone density?</h3>
+                <p>While wrist wearables cannot yet scan bone, they are the perfect hub for that data. By using a <strong>Vitality Station</strong> (a BIA-enabled smart scale), you can monitor bone mineral content and muscle mass trends daily on your watch face.</p>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="sticky-footer">
-        <div class="container footer-content">
-            <div class="footer-top">
-                <span>Stay safe and connected.</span> 
-                <a href="#comparison" class="footer-link">Compare Top Deals</a>
-            </div>
-            <div class="footer-bottom">
-                <p class="disclosure">Senior SmartTech is reader-supported. We may earn a commission at no cost to you.</p>
-                <p class="copyright">&copy; 2026 Senior SmartTech. Human-centric design for an empowered life.</p>
-            </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Senior Smart Tech. Human-centric design for an empowered life.</p>
         </div>
     </footer>
 
