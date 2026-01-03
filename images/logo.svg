@@ -1,5 +1,5 @@
-<svg width="250" height="60" viewBox="0 0 250 60" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="30" cy="30" r="25" fill="none" stroke="#D4AF37" stroke-width="3"/>
-  <path d="M15 30 h10 l5 -12 l5 24 l5 -12 h10" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
-  <text x="65" y="38" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#FFFFFF">Senior SmartTech</text>
+<svg width="250" height="80" viewBox="0 0 250 80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="35" cy="40" r="25" fill="none" stroke="#D4AF37" stroke-width="3"/>
+  <path d="M20 40 h10 l5 -12 l5 24 l5 -12 h10" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+  <text x="75" y="48" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#FFFFFF">Senior SmartTech</text>
 </svg>
