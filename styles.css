@@ -1,289 +1,215 @@
 /* ===========================================================
-    SENIOR SMART TECH – ACCESSIBLE STYLESHEET (V5: FINAL MINIMALIST REFINEMENT)
-    Aesthetic: Clean Arial, Soft Pastels, Gold Accents, Vertical Scroll.
+    SENIOR SMART TECH – MODERN SANCTUARY (PRODUCTION V6)
+    Variables: Sage (#A2AC94), Charcoal (#6C6865), White (#FFFFFF)
 =========================================================== */
 
-/* --- 0. COLOR PALETTE & VARIABLES --- */
 :root {
-    /* Base Pastel Colors */
-    --color-pale-blue: #D7E7F0;      
-    --color-pale-green: #E4F0E2;     
-    --color-soft-peach: #FCEFE9;     
-
-    /* Trust Colors */
-    --color-primary-text: #212121;
-    --color-authoritative-dark: #0B2F44; /* Deep Navy */
-    --color-soft-header-dark: #4A637A; /* Softer Dark Blue/Gray for Headings */
-    --color-accent-gold: #FFD700;    /* Bright Gold for Star Ratings */
-    --color-white: #FFFFFF;
-    --color-light-gray-border: #D1D5DB; /* For clean white button borders */
+    --sage: #A2AC94;
+    --charcoal: #6C6865;
+    --white: #FFFFFF;
+    --off-white: #F8F9F7;
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- GLOBAL TYPOGRAPHY --- */
+/* --- RESET & ACCESSIBILITY BASE --- */
+* { box-sizing: border-box; }
+
 body {
-    background-color: var(--color-background-soft);
-    color: var(--color-primary-text);
-    font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif;
-    font-size: 1.25rem; /* Increased for senior legibility */
-    line-height: 1.6; 
+    background-color: var(--white);
+    color: var(--charcoal);
+    font-family: var(--font-main);
+    font-size: 18px; /* Senior Legibility Standard */
+    line-height: 1.6;
+    margin: 0;
     scroll-behavior: smooth;
 }
 
-/* Headings (Using soft header color) */
-h1, h2, h3, h4, p, li {
-    text-align: left;
-    color: var(--color-soft-header-dark); 
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--charcoal);
+    font-weight: 700;
     line-height: 1.2;
 }
 
-strong {
-    font-weight: 700; /* Ensures strong tag works */
-    color: var(--color-authoritative-dark); /* Highlighted text is dark navy */
-}
-.star-rating {
-    color: var(--color-accent-gold); 
-    font-size: 1em;
-}
-
-/* --- 1. NAVIGATION BAR --- */
+/* --- NAVIGATION --- */
 .navbar {
-    padding: 15px 5%; 
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(162, 172, 148, 0.2);
 }
-.navbar .logo-area {
-    font-size: 0; /* Hide the "Senior Smart Tech" text here */
-}
-.navbar .logo-area img {
-    height: 35px;
+.logo-area img { height: 40px; }
+
+/* --- HERO SECTION --- */
+.header-hero {
+    background-color: var(--off-white);
+    padding: 80px 0;
+    margin-bottom: 60px;
 }
 
-/* --- 2. HEADER/HERO BANNER (Blurb Restored, Title Centered-Right) --- */
-.header-hero {
+.hero-flex {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 50px 5%; 
-    background-color: var(--color-white);
-    border-bottom: 5px solid var(--color-pale-blue);
-}
-.header-image {
-    max-width: 45%; /* Larger presence */
-    height: auto;
-    border-radius: 4px;
-    border: 1px solid var(--color-light-gray-border);
-    box-shadow: 12px 12px 0px var(--color-pale-blue); /* Modern "Offset" Look */
-    object-fit: cover;
-}
-.header-text h1 {
-    font-size: 2.2em;
-    font-weight: 800;
-    color: var(--color-authoritative-dark); 
-    margin-bottom: 15px;
+    gap: 50px;
 }
 
-/* --- 3. SECTIONS (General) --- */
-section {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 30px;
+.header-image-container { flex: 1; }
+.header-image {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 20px 20px 0px var(--sage);
+    display: block;
+}
+
+.header-text { flex: 1.2; }
+.header-text h1 { font-size: 2.8rem; margin-bottom: 20px; }
+
+/* --- VITALITY STATION (NEW SECTION) --- */
+.vitality-station {
+    margin: 80px 0;
+    padding: 50px;
+    background-color: var(--white);
+    border: 2px solid var(--sage);
     border-radius: 8px;
 }
-section h2 {
-    border-bottom: 2px solid var(--color-pale-blue);
-    padding-bottom: 5px;
+
+.vitality-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-
-/* --- 4. INTRO/PERFECT FIT SECTION (RESTORED, NO ASTERISKS, NO BUTTONS) --- */
-.intro .lead {
-    font-size: 1.2em;
-    color: var(--color-authoritative-dark);
+.vitality-content { flex: 1.5; }
+.eyebrow {
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
 }
-.intro-grid {
+
+.vitality-features {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.vitality-features li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.vitality-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--sage);
+    font-weight: bold;
+}
+
+.vitality-media { flex: 1; }
+.vitality-media img { width: 100%; border-radius: 4px; }
+
+/* --- GRIDS & CARDS --- */
+.grid-three {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.grid-four {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
-    margin-top: 20px;
+    margin: 40px 0;
 }
-.intro-card {
+
+.info-card, .product-card {
+    padding: 25px;
+    background: var(--off-white);
     border-radius: 6px;
-    padding: 20px;
-    background-color: var(--color-pale-blue);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-.intro-card:nth-child(2) { background-color: var(--color-pale-green); }
-.intro-card:nth-child(3) { background-color: var(--color-soft-peach); }
-.intro-card h3 {
-    color: var(--color-authoritative-dark);
-    margin-bottom: 5px;
+    text-align: center;
 }
 
-
-/* --- 5. CORE BENEFIT CARDS (KEEP, NO BUTTONS) --- */
-.benefit-grid {
-    grid-template-columns: repeat(3, 1fr); /* Explicitly three cards */
-    gap: 20px;
-    margin-top: 20px;
-}
-.benefit-card {
-    border-radius: 6px;
-    padding: 20px;
-    /* Ensure colors are correct: Blue, Green, Peach */
-}
-.benefit-card:nth-child(1) { background-color: var(--color-pale-blue); }
-.benefit-card:nth-child(2) { background-color: var(--color-pale-green); }
-.benefit-card:nth-child(3) { background-color: var(--color-soft-peach); }
-
-
-/* --- 6. PRODUCT REVIEW CARDS (4-ACROSS, WHITE BUTTONS) --- */
-.review-grid-section {
-    max-width: 1200px; /* Wider container for 4 cards */
-    margin: 40px auto;
-}
-.review-grid {
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 15px; /* Reduced gap */
-}
-.product-review-card {
-    padding: 12px; 
-}
-.product-review-card img {
-    max-height: 160px; 
+.info-card img, .product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 20px;
 }
 
-/* White Buy Now Button (on Product Cards) */
-/* --- PREMIUM REFINED BUTTONS --- */
+/* --- BUTTONS --- */
 .btn-primary {
     display: inline-block;
-    background: transparent;
-    color: var(--color-authoritative-dark);
-    border: 1.5px solid var(--color-authoritative-dark);
-    padding: 12px 30px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    padding: 16px 35px;
+    background-color: var(--sage);
+    color: var(--white);
     text-decoration: none;
-    border-radius: 2px; /* Slight rounding for polish, not an oval */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 700;
+    border-radius: 4px;
+    transition: var(--transition);
+    border: 2px solid var(--sage);
 }
 
 .btn-primary:hover {
-    background: var(--color-authoritative-dark);
-    color: var(--color-white);
-    transform: translateY(-2px); /* Subtle "lift" effect */
-    box-shadow: 0 4px 10px rgba(11, 47, 68, 0.15);
+    background-color: var(--charcoal);
+    border-color: var(--charcoal);
+    transform: translateY(-3px);
 }
 
-/* --- 7. COMPARISON TABLE (FULL WIDTH, GOLD STARS, WHITE BUTTONS, NO FOOTER BUTTON) --- */
-.comparison-table {
-    padding: 0; /* Remove padding here as table extends full width */
-    border-radius: 0;
-    box-shadow: none;
-    background: var(--color-background-soft);
-    max-width: 100%; /* Full screen width */
-}
-.comparison-table h2 {
-    max-width: 1100px; 
-    margin: 0 auto 25px;
-    padding: 0 5%;
-}
-.table-wrapper {
-    max-width: 100%;
-    overflow-x: auto; /* Ensure horizontal scroll if table is too wide */
-}
-.table-wrapper table {
-    min-width: 700px; /* Ensure minimum width for columns */
-}
-.table-wrapper tr:nth-child(even) {
-    background-color: var(--color-pale-blue); /* Pale Blue Stripe */
-}
-.table-wrapper tr:nth-child(odd) {
-    background-color: var(--color-white); /* White Stripe */
+.btn-outline {
+    background-color: transparent;
+    color: var(--charcoal);
 }
 
-/* White Buy Now Button (on Table) */
-.comparison-table .btn-primary {
-    background: var(--color-white);
-    border-color: var(--color-light-gray-border); 
-    color: var(--color-soft-header-dark);
-}
-.comparison-table .btn-primary:hover {
-    background: var(--color-soft-header-dark);
-    color: var(--color-white);
-}
-
-/* --- 8. CUSTOMER SUCCESS (VERTICAL SCROLLING/FAQ STYLE) --- */
-.customer-success {
-    background-color: var(--color-soft-peach);
-    max-width: 1100px; /* Max width 1100px */
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(33, 33, 33, 0.08); 
-    margin: 50px auto; /* Correct placement above footer */
-}
-
-.customer-review-list {
-    display: block; /* Vertical list structure */
-    max-height: 400px; /* Fixed height */
-    overflow-y: scroll; /* Vertical scrolling */
-    -webkit-overflow-scrolling: touch; 
-    padding: 0; 
-    border-top: 1px solid rgba(11, 47, 68, 0.1); /* Separator line */
-}
-
-.customer-review-list li {
-    padding: 15px 0;
-    border-bottom: 1px dashed rgba(11, 47, 68, 0.1); 
-    margin-left: 0;
-    list-style: none;
-    font-size: 1em;
-}
-.customer-review-list li:last-child {
-    border-bottom: none;
-}
-.customer-review-list li .quote {
-    font-style: italic;
-    color: var(--color-authoritative-dark);
-    margin-bottom: 5px;
-}
-.customer-review-list li .source {
-    display: block;
-    text-align: right;
-    font-weight: 400;
-    color: var(--color-soft-header-dark);
-    font-size: 0.9em;
-}
-
-/* --- 9. FOOTER --- */
-footer {
-    padding: 10px 20px; /* Reduced footer height */
+/* --- ABOUT PILLARS --- */
+.about-standard {
     text-align: center;
+    padding: 100px 0;
+    border-top: 1px solid #eee;
 }
+
+.pillar-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pillar-num {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--sage);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    padding: 60px 0;
+    background: var(--off-white);
+    text-align: center;
+    font-size: 0.95rem;
+}
+
 .disclosure {
-    font-size: 0.75rem; /* Very small disclosure text */
+    font-size: 0.8rem;
+    margin-top: 20px;
+    opacity: 0.7;
 }
 
 /* --- RESPONSIVENESS --- */
-@media (max-width: 1000px) {
-    .review-grid {
-        grid-template-columns: repeat(2, 1fr); /* Fall back to 2 columns */
-    }
-}
-@media (max-width: 768px) {
-    .header-image {
-        max-width: 40%;
-    }
-}
-@media (max-width: 600px) {
-    .header-hero {
+@media (max-width: 900px) {
+    .hero-flex, .vitality-wrapper, .pillar-row {
         flex-direction: column;
-        text-align: center;
     }
-    .header-image {
-        max-width: 60%;
-        margin-bottom: 15px;
-    }
-    .header-text {
-        padding: 0;
-    }
+    .header-text { text-align: center; }
+    .header-text h1 { font-size: 2.2rem; }
 }
