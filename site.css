@@ -3,71 +3,139 @@
     SENIOR SMART TECH – MODERN SANCTUARY PRODUCTION CSS
     Palette: Sage (#A2AC94), Charcoal (#6C6865), White (#FFFFFF)
 =========================================================== */
+/* MODERN SANCTUARY STYLE GUIDE V4 */
 :root {
-    --navy: #1A2B3C;
+    --navy: #0B1D32;
     --gold: #D4AF37;
-    --bg-light: #F9F7F5;
+    --off-white: #F9F9F9;
     --white: #FFFFFF;
-    --text: #333;
+    --text-charcoal: #333333;
+    --soft-gray: #EAEAEA;
 }
+
+* { box-sizing: border-box; }
 
 body {
-    font-family: Arial, sans-serif;
-    font-size: 1.15rem;
-    line-height: 1.6;
+    font-family: 'Inter', -apple-system, sans-serif;
     margin: 0;
-    background-color: var(--bg-light);
-    color: var(--text);
+    font-size: 18px; /* Accessible standard */
+    line-height: 1.6;
+    color: var(--text-charcoal);
+    background-color: var(--white);
 }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
 
-/* IMAGE PRESERVATION FIX */
-.img-contained {
+/* HERO BANNER - FULL WIDTH NAVY */
+.hero-banner {
+    background-color: var(--navy);
+    color: var(--white);
+    padding-bottom: 80px;
+}
+
+.navbar { padding: 30px 0; }
+.logo-light { height: 50px; filter: brightness(0) invert(1); } /* Force white logo */
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.hero-text h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; color: var(--white); }
+.hero-text p { font-size: 1.4rem; opacity: 0.9; margin-bottom: 30px; }
+
+.hero-image-box img {
     width: 100%;
-    height: 350px;
-    object-fit: contain; /* HEADS AND WATCHES PRESERVED */
-    background-color: #f0f0f0; /* Consistent card background */
-    border-radius: 12px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
-.card-img-box {
-    background: #f0f0f0;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-/* STICKY FOOTER BAR */
-.sticky-footer {
+/* STICKY FOOTER */
+.sticky-bar {
     position: fixed;
     bottom: -100px;
     left: 0;
     width: 100%;
     background: var(--navy);
     color: white;
+    z-index: 9999;
     padding: 15px 0;
-    transition: bottom 0.4s ease;
-    z-index: 1000;
+    transition: bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
 }
-.show-bar { bottom: 0; }
-.sticky-flex { display: flex; justify-content: space-between; align-items: center; }
+.sticky-bar.active { bottom: 0; }
+.sticky-content { display: flex; justify-content: space-between; align-items: center; }
 
-/* REVENUE TABLE */
-.vitality-section { margin: 60px 0; padding: 40px; background: white; border-radius: 20px; }
-.disclaimer { font-size: 0.85rem; color: #777; font-style: italic; margin-bottom: 10px; }
-.comparison-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-.comparison-table th { background: #eee; padding: 15px; text-align: left; }
-.comparison-table td { padding: 15px; border-bottom: 1px solid #ddd; }
-.stars { color: var(--gold); font-size: 1.4rem; }
+/* FEATURE CARDS - POLISHED HEADS/WATCHES */
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 80px 0; }
+.feature-card { border-radius: 15px; overflow: hidden; background: var(--off-white); border: 1px solid var(--soft-gray); }
+.card-img-wrapper { height: 400px; overflow: hidden; }
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%; /* PRESERVES HEADS AND WATCHES */
+}
+.card-body { padding: 30px; }
 
-/* BUTTONS */
-.btn-gold { background: var(--gold); color: var(--navy); padding: 10px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-.btn-table { color: var(--navy); font-weight: bold; text-decoration: underline; }
-.btn-primary { display: inline-block; background: var(--navy); color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; }
+/* VITALITY TABLE */
+.vitality-section { padding: 80px 0; border-top: 1px solid var(--soft-gray); }
+.section-header { text-align: center; margin-bottom: 50px; }
+.table-wrapper { overflow-x: auto; background: white; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.comparison-table { width: 100%; border-collapse: collapse; }
+.comparison-table th { background: var(--off-white); padding: 20px; text-align: left; border-bottom: 2px solid var(--soft-gray); }
+.comparison-table td { padding: 20px; border-bottom: 1px solid var(--soft-gray); }
+.stars { color: var(--gold); letter-spacing: 2px; }
+
+/* BUTTONS - PREMIUM CTA */
+.btn-cta-gold {
+    display: inline-block;
+    background-color: var(--gold);
+    color: var(--navy);
+    padding: 16px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+.btn-table-gold {
+    display: inline-block;
+    border: 2px solid var(--gold);
+    color: var(--navy);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background: transparent;
+}
+.btn-table-gold:hover { background: var(--gold); color: white; }
+.btn-cta-gold:hover { transform: translateY(-3px); }
+
+/* FAQ SCROLLING */
+.faq-scroll-container { margin-bottom: 80px; }
+.faq-content { 
+    max-height: 400px; 
+    overflow-y: auto; 
+    padding: 20px; 
+    background: var(--off-white); 
+    border-radius: 10px;
+    border: 1px solid var(--soft-gray);
+}
+.faq-item { margin-bottom: 30px; border-bottom: 1px solid var(--soft-gray); padding-bottom: 15px; }
+
+/* COMMUNITY VOICES */
+.community-voices { padding: 60px 0; text-align: center; background: #fff; }
+.testimonial-box blockquote { font-style: italic; font-size: 1.2rem; margin: 20px 0; color: var(--navy); }
+.testimonial-box cite { display: block; font-style: normal; font-weight: bold; color: var(--gold); font-size: 0.9rem; }
 
 /* FOOTER */
-.footer { background: var(--navy); color: white; text-align: center; padding: 40px 0; margin-top: 60px; }
+.main-footer { background: var(--navy); color: white; padding: 60px 0; text-align: center; }
+.amazon-disclosure { font-size: 12px; margin-top: 30px; opacity: 0.6; }
 
-/* LAYOUT */
-.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 60px 0; }
-.grid-two { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+@media (max-width: 900px) {
+    .hero-inner, .feature-grid { grid-template-columns: 1fr; text-align: center; }
+}
