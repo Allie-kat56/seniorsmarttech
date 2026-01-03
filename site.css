@@ -3,36 +3,32 @@
     SENIOR SMART TECH – MODERN SANCTUARY PRODUCTION CSS
     Palette: Sage (#A2AC94), Charcoal (#6C6865), White (#FFFFFF)
 =========================================================== */
-/* MASTER TECHNICAL SPECIFICATION V5.0 */
+/* MASTER TECHNICAL SPECIFICATION V6.0 - FINAL CONTRAST FIX */
 :root {
     --navy: #0B1D32;
     --gold: #D4AF37;
-    --white: #FFFFFF;
     --charcoal: #333333;
-    --border: #EAEAEA;
+    --white: #FFFFFF;
+    --border: #EEEEEE;
+    --soft-gray: #F8F9FA;
 }
 
 * { box-sizing: border-box; }
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 18px; /* ACCESSIBILITY MANDATE */
     line-height: 1.6;
     color: var(--charcoal);
     background-color: var(--white);
     margin: 0;
-    /* FIXED FRAME PADDING */
-    padding-top: 100px;
-    padding-bottom: 120px;
+    padding-top: 80px; /* SPACE FOR FIXED HEADER */
+    padding-bottom: 120px; /* SPACE FOR FIXED FOOTER */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 25px;
-}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
 
-/* FIXED HEADER */
+/* FIXED HEADER (CONTRAST: NAVY BG / WHITE TEXT) */
 .fixed-header {
     position: fixed;
     top: 0;
@@ -40,150 +36,88 @@ body {
     background: var(--navy);
     z-index: 1000;
     padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.header-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo-group { display: flex; align-items: center; gap: 12px; }
+.logo { height: 35px; }
+.logo-text { color: var(--white); font-weight: bold; font-size: 1.2rem; }
+.nav-links a { color: var(--white); text-decoration: none; margin-left: 20px; font-weight: bold; font-size: 0.9rem; }
 
-.logo { height: 40px; }
+/* HERO L-SHAPE (WHITE BACKGROUND) */
+.hero-white { padding: 60px 0; background: var(--white); }
+.hero-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: center; }
+.hero-text h1 { font-size: 3rem; color: var(--navy); line-height: 1.1; margin-bottom: 20px; }
+.btn-navy { display: inline-block; background: var(--navy); color: var(--white); padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; }
 
-.nav-links a {
-    color: var(--white);
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+/* THREE-CARD GALLERY */
+.hero-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.card { border-radius: 12px; overflow: hidden; background: var(--soft-gray); }
+.card-tall { grid-row: span 2; height: 500px; }
+.card-top-down, .card-face { height: 242px; }
 
-/* HERO CARDS */
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 50px;
-}
+.fit-cover { width: 100%; height: 100%; object-fit: cover; }
+.fit-man { width: 100%; height: 100%; object-fit: cover; object-position: center 80%; }
 
-.hero-card {
-    height: 450px;
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.img-man {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 80%; /* ENSURES WATCH IS VISIBLE */
-}
-
-.img-woman {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.7));
-    color: white;
-}
-
-.hero-overlay h1 { font-size: 2rem; margin: 0; }
-
-/* AFFILIATE TABLE */
-.table-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
+/* VITALITY TABLE CARD */
+.table-card { padding: 40px; background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-top: 40px; }
 .comparison-table { width: 100%; border-collapse: collapse; }
-.comparison-table th { text-align: left; padding: 15px; background: #f9f9f9; border-bottom: 2px solid var(--border); }
-.comparison-table td { padding: 18px; border-bottom: 1px solid var(--border); }
+.comparison-table th { background: var(--soft-gray); padding: 15px; text-align: left; color: var(--navy); border-bottom: 2px solid var(--border); }
+.comparison-table td { padding: 15px; border-bottom: 1px solid var(--border); }
+.product-cell { display: flex; align-items: center; gap: 10px; }
+.thumb { width: 35px; height: 35px; background: #ddd; border-radius: 4px; }
 .stars { color: var(--gold); letter-spacing: 2px; }
 
-/* GHOST BUTTONS */
+/* GHOST BUTTON */
 .btn-ghost {
     display: inline-block;
-    padding: 10px 20px;
     border: 2px solid var(--gold);
     color: var(--navy);
+    padding: 8px 18px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 0.85rem;
 }
 
-/* INNER SCROLL CARD */
-.content-scroll-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    margin-bottom: 50px;
-}
+/* SCROLLABLE CONTAINER */
+.scroll-wrapper { margin: 60px 0; }
+.scroll-container { max-height: 500px; overflow-y: auto; background: var(--soft-gray); padding: 40px; border-radius: 12px; border: 1px solid var(--border); }
+blockquote { font-style: italic; font-size: 1.2rem; border-left: 4px solid var(--gold); padding-left: 20px; margin: 25px 0; }
+.soft-hr { border: 0; height: 1px; background: #ddd; margin: 40px 0; }
 
-.scroll-inner {
-    max-height: 500px;
-    overflow-y: auto;
-    padding: 40px;
-}
-
-/* FIXED REVENUE FOOTER */
+/* FIXED REVENUE FOOTER (CONTRAST: NAVY BG / WHITE TEXT) */
 .fixed-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     background: var(--navy);
-    color: white;
+    color: var(--white);
     z-index: 1000;
-    padding: 20px 0;
 }
 
-.footer-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-cta {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.footer-flex { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
 
 .btn-gold {
     background: var(--gold);
-    color: var(--navy);
-    padding: 12px 25px;
+    color: var(--navy); /* NAVY TEXT ON GOLD FOR CONTRAST */
+    padding: 12px 28px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
 }
 
-.amazon-disclosure {
+.disclaimer-bar {
+    text-align: center;
+    background: rgba(0,0,0,0.2);
     font-size: 12px;
+    padding: 8px 0;
+    color: var(--white);
     opacity: 0.8;
-    margin: 0;
 }
 
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-    .hero-grid { grid-template-columns: 1fr; }
-    .hero-card { height: 300px; }
-    .footer-cta { flex-direction: column; gap: 15px; text-align: center; }
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero-layout { grid-template-columns: 1fr; text-align: center; }
+    .footer-flex { flex-direction: column; gap: 15px; text-align: center; }
 }
