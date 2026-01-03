@@ -1,196 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Smart Tech: Peace of Mind and Confidence</title>
-    
-    <link rel="stylesheet" href="styles.css"> 
+    <title>Senior Smart Tech | Peace of Mind and Confidence</title>
+    <link rel="stylesheet" href="site.css"> 
 </head>
-
 <body>
     
-    <nav class="navbar">
-        <div class="logo-area">
-            <img src="images/senior-smart-tech-logo-placeholder.png" alt="Senior Smart Tech Logo">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="container">
+            <div class="logo-area">
+                <img src="images/logo.svg" alt="Senior Smart Tech Logo">
+            </div>
         </div>
     </nav>
 
     <header class="header-hero" role="banner">
-        <img src="images/happy-senior-couple-tech.jpg" alt="A smiling senior couple using accessible smart technology." class="header-image">
-        <div class="header-text">
-            <h1>Your Caring Guide to Smart Technology</h1>
-            <p>Smartwatches and safety systems designed not just for function, but for **complete confidence**—with simple screens, reliable connections, and lightweight comfort.</p>
+        <div class="container hero-flex">
+            <div class="header-image-container">
+                <img src="images/hero-calm.jpg" alt="A smiling senior couple using accessible smart technology." class="header-image">
+            </div>
+            <div class="header-text">
+                <h1>Your Caring Guide to Smart Technology</h1>
+                <p>Smartwatches and safety systems designed for **complete confidence**—with simple screens, reliable connections, and lightweight comfort.</p>
+            </div>
         </div>
     </header>
 
-    <main id="main-content">
-        <section style="background-color: #f9f9f9; border: 1px solid #eee; margin-top: 20px;">
+    <main id="main-content" class="container">
+        
+        <section class="vitality-station" aria-labelledby="vitality-heading">
+            <div class="vitality-wrapper">
+                <div class="vitality-content">
+                    <span class="eyebrow">Passive Health Monitoring</span>
+                    <h2 id="vitality-heading">The Vitality Station</h2>
+                    <p>Stay informed without the stress. Our 2026 Vitality Hub integrates body composition scales and blood pressure monitoring into one simple, Sage-guided interface.</p>
+                    <ul class="vitality-features">
+                        <li><strong>One-Touch Sync:</strong> No cables or complicated apps.</li>
+                        <li><strong>High Contrast:</strong> Extra-large digital readouts for effortless viewing.</li>
+                        <li><strong>Safety First:</strong> Automatically shares vital trends with your chosen family members.</li>
+                    </ul>
+                    <a href="#vitality-link" class="btn-primary">Explore the Vitality Station</a>
+                </div>
+                <div class="vitality-media">
+                    <img src="images/vitality-station.jpg" alt="Sage Green digital blood pressure and composition scale">
+                </div>
+            </div>
+        </section>
+
+        <section class="highlight-box">
             <h2>What is the best fall-detection alarm for UK seniors in 2026?</h2>
-            <p>The <strong>Taking Care Anywhere</strong> package is the top-rated choice for 2026. It is a future-proofed GPS alarm pendant with built-in fall detection that works both at home and away. It features a multi-network SIM for reliable connection without a landline and a 1–2 month battery life.</p>
+            <p>The <strong>Taking Care Anywhere</strong> package is the top-rated choice. It features a future-proofed GPS alarm pendant with built-in fall detection and a multi-network SIM for reliable connection without a landline.</p>
         </section>
     
         <section class="intro" aria-labelledby="intro-heading">
             <h2 id="intro-heading">Find Your Perfect Fit for Confidence</h2>
-            <p class="lead">Choosing technology should feel simple, not stressful. We compare devices on what truly matters.</p>
+            <p class="lead">Choosing technology should feel simple, not stressful. We compare devices on what truly matters to you.</p>
             
-            <div class="intro-grid">
-                <article class="intro-card">
-                    <img src="images/smartwatch_closeup.jpg" alt="Senior looking at smartwatch" style="width:100%; border-radius:4px; margin-bottom:10px;">
+            <div class="grid-three">
+                <article class="info-card">
+                    <img src="images/smartwatch_closeup.jpg" alt="Close-up of clear smartwatch screen">
                     <h3>Effortless Clarity</h3>
-                    <p>Interfaces designed for easy navigation.</p>
+                    <p>Interfaces designed for easy navigation and large, readable text.</p>
                 </article>
-                <article class="intro-card">
-                    <img src="images/smartwatch_senior_man.jpg" alt="Senior man using safety tech" style="width:100%; border-radius:4px; margin-bottom:10px;">
+                <article class="info-card">
+                    <img src="images/smartwatch_senior_man.jpg" alt="Senior man wearing safety tech">
                     <h3>Rock-Solid Reliability</h3>
-                    <p>Dependable fall detection you can trust.</p>
+                    <p>Dependable fall detection you can trust to work when it matters most.</p>
                 </article>
-                <article class="intro-card">
-                    <img src="images/smartwatch_senior_woman.jpg" alt="Senior woman wearing smartwatch" style="width:100%; border-radius:4px; margin-bottom:10px;">
+                <article class="info-card">
+                    <img src="images/smartwatch_senior_woman.jpg" alt="Senior woman comfortable with her watch">
                     <h3>Lightweight Comfort</h3>
-                    <p>Wear it all day without a second thought.</p>
+                    <p>Designed to be worn all day and night without a second thought.</p>
                 </article>
             </div>
         </section>
 
-        <section class="review-grid-section">
-            <h2 id="smartwatch-heading">Our Top Rated Smartwatches for Simplicity</h2>
-            <div class="review-grid" aria-labelledby="smartwatch-heading">
-            
-                <article class="product-review-card">
+        <section class="reviews">
+            <h2 id="product-heading">Our Top Rated Smartwatches for Simplicity</h2>
+            <div class="grid-four">
+                <article class="product-card">
                     <h3>Fitbit Versa 3</h3>
-                    <img src="images/fitbit-versa-3.jpg" alt="Fitbit Versa 3 smartwatch, highly readable for seniors" loading="lazy">
-                    <p>The Versa 3 offers true freedom with its incredible **6+ day battery life**. Perfect for light, accurate fitness tracking.</p>
-                    <a href="[FITBIT_AFFILIATE_LINK]" class="btn-primary">Buy Now</a>
+                    <img src="images/fitbit-versa-3.jpg" alt="Fitbit Versa 3" loading="lazy">
+                    <p>Freedom with an incredible **6+ day battery life**. Perfect for accurate health tracking.</p>
+                    <a href="#" class="btn-primary btn-outline">Buy Now</a>
                 </article>
 
-                <article class="product-review-card">
+                <article class="product-card">
                     <h3>Apple Watch SE</h3>
-                    <img src="images/apple-watch-se.jpg" alt="Apple Watch SE smartwatch, features fall detection for seniors" loading="lazy">
-                    <p>The ultimate safety net. It provides **proven fall detection**, emergency SOS, and highly reliable health monitoring.</p>
-                    <a href="[APPLE_AFFILIATE_LINK]" class="btn-primary">Buy Now</a>
+                    <img src="images/apple-watch-se.jpg" alt="Apple Watch SE" loading="lazy">
+                    <p>The ultimate safety net. Features **proven fall detection** and emergency SOS.</p>
+                    <a href="#" class="btn-primary btn-outline">Buy Now</a>
                 </article>
 
-                <article class="product-review-card">
-                    <h3>Samsung Galaxy Watch</h3>
-                    <img src="images/samsung-galaxy-watch.jpg" alt="Samsung Galaxy Watch with large display for seniors" loading="lazy">
-                    <p>If a **large, crystal-clear display** is your highest priority, the Galaxy Watch is unmatched for reading notifications.</p>
-                    <a href="[SAMSUNG_AFFILIATE_LINK]" class="btn-primary">Buy Now</a>
+                <article class="product-card">
+                    <h3>Samsung Galaxy</h3>
+                    <img src="images/samsung-galaxy-watch.jpg" alt="Samsung Galaxy Watch" loading="lazy">
+                    <p>A **large, crystal-clear display** unmatched for reading notifications clearly.</p>
+                    <a href="#" class="btn-primary btn-outline">Buy Now</a>
                 </article>
-                <article class="product-review-card">
+
+                <article class="product-card">
                     <h3>Garmin Vívomove</h3>
-                    <img src="images/garmin-vivomove.jpg" alt="Garmin Vívomove hybrid smartwatch with analog hands" loading="lazy">
-                    <p>Looks like a classic watch but **secretly tracks** health data. Ideal for those who want discreet monitoring without bulky technology.</p>
-                    <a href="[GARMIN_AFFILIATE_LINK]" class="btn-primary">Buy Now</a>
+                    <img src="images/garmin-vivomove.jpg" alt="Garmin Vívomove" loading="lazy">
+                    <p>Classic looks with **discreet tracking**. Ideal for a traditional watch feel.</p>
+                    <a href="#" class="btn-primary btn-outline">Buy Now</a>
                 </article>
             </div>
         </section>
 
-        <section class="comparison-table" aria-labelledby="compare-heading">
-            <h2 id="compare-heading">Quick Comparison: Core Features</h2>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Model</th>
-                            <th>Ease of Use</th>
-                            <th>Health Features</th>
-                            <th>Battery Life</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Fitbit Versa 3</td>
-                            <td><span class="star-rating">★★★★★</span></td>
-                            <td><span class="star-rating">★★★★☆</span></td>
-                            <td><strong>6+ days</strong></td>
-                            <td><a href="[FITBIT_AFFILIATE_LINK]" class="btn-primary">Buy Now</a></td>
-                        </tr>
-                        <tr>
-                            <td>Apple Watch SE</td>
-                            <td><span class="star-rating">★★★★☆</span></td>
-                            <td><span class="star-rating">★★★★★</span></td>
-                            <td>18 hours</td>
-                            <td><a href="[APPLE_AFFILIATE_LINK]" class="btn-primary">Buy Now</a></td>
-                        </tr>
-                        <tr>
-                            <td>Samsung Galaxy Watch</td>
-                            <td><span class="star-rating">★★★★☆</span></td>
-                            <td><span class="star-rating">★★★★☆</span></td>
-                            <td>2–3 days</td>
-                            <td><a href="[SAMSUNG_AFFILIATE_LINK]" class="btn-primary">Buy Now</a></td>
-                        </tr>
-                        <tr>
-                            <td>Garmin Vívomove</td>
-                            <td><span class="star-rating">★★★☆☆</span></td>
-                            <td><span class="star-rating">★★★☆☆</span></td>
-                            <td><strong>5+ days</strong></td>
-                            <td><a href="[GARMIN_AFFILIATE_LINK]" class="btn-primary">Buy Now</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            </section>
-        
-        <section class="customer-success" aria-labelledby="success-heading">
-            <h2 id="success-heading">Real Customer Stories: Peace of Mind</h2>
-            <ul class="customer-review-list">
-                <li>
-                    <p class="quote">"The Fall Detection on my new watch saved me. It gave my daughter **true peace of mind**, and that's worth more than the price."</p>
-                    <span class="source">— John, Verified Customer</span>
-                </li>
-                <li>
-                    <p class="quote">"I love that I only charge the Fitbit once a week! It truly **simplifies my health routine** and removes the daily fuss."</p>
-                    <span class="source">— Jane P., Happy Purchaser</span>
-                </li>
-                <li>
-                    <p class="quote">"Finally, a screen I don't need my reading glasses for! The **large, clear text** on the Samsung is absolutely fantastic."</p>
-                    <span class="source">— Robert T., Verified Customer</span>
-                </li>
-                <li>
-                    <p class="quote">"I appreciate that this technology doesn't look bulky. It's **discreet confidence** every time I wear it."</p>
-                    <span class="source">— Mike L., Active Senior</span>
-                </li>
-                <li>
-                    <p class="quote">"The setup was surprisingly easy. No confusing jargon, just simple steps. Highly recommend for the **technologically shy**."</p>
-                    <span class="source">— Sarah K., First-Time Smartwatch User</span>
-                </li>
-            </ul>
-        </section>
-        <section class="about-section" style="border-top: 1px solid #eee; margin-top: 80px; padding-top: 60px;">
-            <div style="max-width: 750px; margin: 0 auto; text-align: center;">
-                <h2 style="font-family: serif; font-style: italic; font-weight: 400; border: none; font-size: 2.2rem; color: #333;">The Senior Smart Tech Standard</h2>
-                <p style="color: #666; margin-top: 20px; font-size: 1.1rem; line-height: 1.8;">
-                    We believe technology should serve the person, not the other way around. 
-                    Our review process is strictly focused on three pillars: 
-                    <strong>Visual Clarity, Physical Comfort, and Digital Reliability.</strong>
-                </p>
+        <section class="about-standard">
+            <div class="about-inner">
+                <h2 class="title-accent">The Senior Smart Tech Standard</h2>
+                <p>We believe technology should serve the person, not the other way around. Our review process is strictly focused on: **Visual Clarity, Physical Comfort, and Digital Reliability.**</p>
                 
-                <div style="display: flex; justify-content: space-around; margin-top: 50px; border-top: 1px solid #f0f0f0; padding-top: 30px;">
-                    <div style="flex: 1; padding: 0 15px;">
-                        <span style="display: block; font-size: 0.8rem; text-transform: uppercase; color: #999; margin-bottom: 10px;">Pillar 01</span>
-                        <h4 style="color: #222;">Plain English</h4>
-                        <p style="font-size: 0.95rem; color: #777;">Zero jargon. Just clear explanations of how tech helps you stay independent.</p>
+                <div class="pillar-row">
+                    <div class="pillar">
+                        <span class="pillar-num">01</span>
+                        <h4>Plain English</h4>
+                        <p>Zero jargon. Just clear explanations of how tech helps you stay independent.</p>
                     </div>
-                    <div style="flex: 1; border-left: 1px solid #f0f0f0; padding: 0 15px;">
-                        <span style="display: block; font-size: 0.8rem; text-transform: uppercase; color: #999; margin-bottom: 10px;">Pillar 02</span>
-                        <h4 style="color: #222;">Human Tested</h4>
-                        <p style="font-size: 0.95rem; color: #777;">We prioritize buttons that are easy to press and screens that are easy to read.</p>
+                    <div class="pillar">
+                        <span class="pillar-num">02</span>
+                        <h4>Human Tested</h4>
+                        <p>We prioritise buttons that are easy to press and screens that are easy to read.</p>
                     </div>
-                    <div style="flex: 1; border-left: 1px solid #f0f0f0; padding: 0 15px;">
-                        <span style="display: block; font-size: 0.8rem; text-transform: uppercase; color: #999; margin-bottom: 10px;">Pillar 03</span>
-                        <h4 style="color: #222;">Future Proof</h4>
-                        <p style="font-size: 0.95rem; color: #777;">Focused on the 2026 UK digital switchover and modern safety standards.</p>
+                    <div class="pillar">
+                        <span class="pillar-num">03</span>
+                        <h4>Future Proof</h4>
+                        <p>Focused on the 2026 UK digital switchover and modern safety standards.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <p class="disclosure">© 2026 Senior Smart Tech | Accessible Reviews</p>
-        <p class="disclosure">We may earn commissions from partner links, but only for products that meet our strict ease-of-use standards.</p>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 Senior Smart Tech | Accessible Reviews</p>
+            <p class="disclosure">We may earn commissions from partner links, but only for products that meet our strict ease-of-use standards.</p>
+        </div>
     </footer>
     
-    </body>
+</body>
 </html>
