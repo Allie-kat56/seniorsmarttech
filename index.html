@@ -3,118 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior SmartTech | Peace of Mind Wearables</title>
+    <meta name="description" content="Senior Smart Tech: Expert-led wearable technology reviews for health and safety.">
+    <title>Senior Smart Tech | Final Production Build</title>
     <link rel="stylesheet" href="site.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Which smartwatch has the best fall detection for seniors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Apple Watch SE remains the top choice for UK seniors in 2026 due to its reliable fall detection sensors and ease of use."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can a smartwatch monitor bone density?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Watches track trends, while the Hume Vitality Scale provides the specific bone density and muscle mass data required for a complete health profile."
+        }
+      }]
+    }
+    </script>
 </head>
 <body>
 
-    <div id="sticky-choice" class="sticky-footer">
-        <div class="container sticky-flex">
-            <span><strong>Top Choice:</strong> Apple Watch SE (Fall Detection)</span>
-            <a href="#" class="btn-gold">Check Details</a>
-        </div>
-    </div>
-
-    <nav class="header-nav">
+    <header class="fixed-header">
         <div class="container header-flex">
-            <div class="logo">Senior SmartTech</div>
-            <ul class="nav-links">
-                <li><a href="#rankings">Rankings</a></li>
-                <li><a href="#vitality">Vitality</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <h1>Wearable Tech, Built for Peace of Mind</h1>
-                <p>Empowering Seniors with Human-Centric Innovation.</p>
-                <div class="hero-image-sub-fix">
-                    <img src="images/smartwatch_senior_man.jpg" alt="Senior man with visible smartwatch" class="img-watch-fix">
-                </div>
-                <a href="#rankings" class="btn-navy">View Rankings</a>
-            </div>
-            <div class="hero-main-image">
-                <img src="images/smartwatch_senior_woman.jpg" alt="Senior woman looking at her watch">
-            </div>
+            <img src="images/logo.svg" alt="Senior Smart Tech Logo" class="logo">
+            <nav class="nav-links">
+                <a href="#rankings">Rankings</a>
+                <a href="#community">Voices</a>
+                <a href="#faq">FAQ</a>
+            </nav>
         </div>
     </header>
 
-    <main class="container">
-        <section id="rankings" class="table-section">
-            <div class="white-card">
-                <table class="affiliate-table">
-                    <thead>
-                        <tr>
-                            <th>Device</th>
-                            <th>Key Benefit</th>
-                            <th>Rating</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="product-cell"><div class="thumbnail"></div> Apple Watch SE</td>
-                            <td>Best Fall Detection</td>
-                            <td class="stars">★★★★★</td>
-                            <td><a href="#" class="btn-gold">Check Details</a></td>
-                        </tr>
-                        <tr>
-                            <td class="product-cell"><div class="thumbnail"></div> Samsung Galaxy 7</td>
-                            <td>Heart Health Tech</td>
-                            <td class="stars">★★★★☆</td>
-                            <td><a href="#" class="btn-gold">Check Details</a></td>
-                        </tr>
-                        <tr>
-                            <td class="product-cell"><div class="thumbnail"></div> Hume Vitality</td>
-                            <td>Bone Density Hub</td>
-                            <td class="stars">★★★★★</td>
-                            <td><a href="#" class="btn-gold">Check Details</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+    <section class="hero container">
+        <div class="hero-grid">
+            <div class="hero-card">
+                <img src="images/smartwatch_senior_man.jpg" alt="Senior man with visible watch" class="img-man">
+                <div class="hero-overlay">
+                    <h1>Wearable Tech, Built for Peace of Mind</h1>
+                </div>
             </div>
+            <div class="hero-card">
+                <img src="images/smartwatch_senior_woman.jpg" alt="Senior woman checking watch" class="img-woman">
+                <div class="hero-overlay">
+                    <p>Empowering Seniors with Human-Centric Innovation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container" id="rankings">
+        <section class="table-card">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Key Benefit</th>
+                        <th>Rating</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Apple Watch SE</strong></td>
+                        <td>Best Fall Detection</td>
+                        <td class="stars">★★★★★</td>
+                        <td><a href="#" class="btn-ghost">Check Details</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Samsung Galaxy 7</strong></td>
+                        <td>Heart Health Insights</td>
+                        <td class="stars">★★★★☆</td>
+                        <td><a href="#" class="btn-ghost">Check Details</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fitbit Versa 3</strong></td>
+                        <td>6-Day Battery Life</td>
+                        <td class="stars">★★★★☆</td>
+                        <td><a href="#" class="btn-ghost">Check Details</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Garmin Vivoactive</strong></td>
+                        <td>GPS Accuracy</td>
+                        <td class="stars">★★★★☆</td>
+                        <td><a href="#" class="btn-ghost">Check Details</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hume Vitality Scale</strong></td>
+                        <td>Bone Density Tech</td>
+                        <td class="stars">★★★★★</td>
+                        <td><a href="#" class="btn-ghost">Check Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
-        <section class="scroll-archive">
-            <div class="scroll-container">
-                <div class="scroll-content">
-                    <div class="community-voices">
-                        <h2>Community Voices</h2>
-                        <p>"Finally, a watch I can actually read without my glasses!" – Joan, Wembley</p>
-                        <p>"The fall detection gives my daughter peace of mind." – Arthur, Neasden</p>
-                    </div>
-                    <hr>
-                    <div id="faq" class="faq-section">
-                        <h2>Common Questions</h2>
-                        <h3>Which watch is best for falls?</h3>
-                        <p>The Apple Watch SE offers the most reliable sensors for seniors.</p>
-                        <h3>Can it track bone density?</h3>
-                        <p>Directly on the wrist? No. But our Hume scale syncs the data to your app.</p>
-                    </div>
+        <section class="content-scroll-card" id="community">
+            <div class="scroll-inner">
+                <h2>Community Voices</h2>
+                <blockquote>"Finally, a watch I can actually read without my glasses!" – Joan, Wembley</blockquote>
+                <blockquote>"The fall detection gives my daughter peace of mind." – Arthur, Neasden</blockquote>
+                
+                <hr>
+
+                <h2 id="faq">Common Questions</h2>
+                <div class="faq-item">
+                    <h3>Which watch is best for falls?</h3>
+                    <p>The Apple Watch SE is our gold-standard recommendation for fall safety.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can it track bone density?</h3>
+                    <p>Wrist-based monitors cannot measure density; however, they display bone mineral content when paired with the Hume Vitality Scale.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer-slim">
-        <div class="container">
-            <p>Senior SmartTech: Human-Centric Design for an Empowered Life.</p>
-            <p class="amazon-disclaimer">As an Amazon Associate, I earn from qualifying purchases.</p>
+    <footer class="fixed-footer">
+        <div class="container footer-flex">
+            <div class="footer-cta">
+                <span><strong>Top Choice:</strong> Apple Watch SE</span>
+                <a href="#" class="btn-gold">Check Details</a>
+            </div>
+            <p class="amazon-disclosure">As an Amazon Associate, I earn from qualifying purchases.</p>
         </div>
     </footer>
 
-    <script>
-        window.onscroll = function() {
-            var bar = document.getElementById("sticky-choice");
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                bar.style.display = "block";
-            } else {
-                bar.style.display = "none";
-            }
-        };
-    </script>
 </body>
 </html>
