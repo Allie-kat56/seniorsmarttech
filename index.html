@@ -1,123 +1,307 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior SmartTech | Modern Sanctuary Dashboard</title>
-    <link rel="stylesheet" href="site.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Senior SmartTech | MVP V1.35</title>
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="Senior SmartTech" class="logo" />
+      <nav class="nav">FAQ</nav>
+    </header>
 
-    <header class="main-header">
-        <div class="dashboard-fluid header-grid">
-            <div class="logo-area">
-                <img src="images/logo.svg" alt="Senior SmartTech" class="brand-logo">
-            </div>
-            <nav class="nav-right">
-                <a href="#rankings">Rankings</a>
-                <a href="#faq">FAQ</a>
-            </nav>
+    <main>
+      <div class="hero-grid">
+        <div>
+          <h1 class="hero-h1">Wearable tech, built for peace of mind</h1>
+          <p class="hero-p">
+            Empowering seniors with human-centric innovation.
+          </p>
         </div>
+        <div class="gallery-wrapper">
+          <img
+            src="images/smartwatch_senior_man.jpg"
+            class="img-fit"
+            alt="Senior Man"
+          />
+          <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 8px">
+            <img
+              src="images/smartwatch_closeup.jpg"
+              class="img-fit"
+              alt="Close up"
+            />
+            <img
+              src="images/smartwatch_senior_woman.jpg"
+              class="img-fit"
+              alt="Senior Woman"
+            />
+          </div>
+        </div>
+      </div>
+
+      <section class="vitality-card">
+        <h2 class="table-title">2026 Vitality Comparison</h2>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Device</th>
+              <th>Benefit</th>
+              <th>Rating</th>
+              <th class="col-right">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Apple Watch SE</strong></td>
+              <td>Fall Detection</td>
+              <td style="color: var(--gold)">★★★★★</td>
+              <td class="col-right">
+                <a href="#" class="btn-ghost">Check Details</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Samsung Galaxy 7</strong></td>
+              <td>Heart Health</td>
+              <td style="color: var(--gold)">★★★★☆</td>
+              <td class="col-right">
+                <a href="#" class="btn-ghost">Check Details</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Fitbit Versa 3</strong></td>
+              <td>6-Day Battery</td>
+              <td style="color: var(--gold)">★★★★☆</td>
+              <td class="col-right">
+                <a href="#" class="btn-ghost">Check Details</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Garmin Vivoactive</strong></td>
+              <td>GPS Reliability</td>
+              <td style="color: var(--gold)">★★★★☆</td>
+              <td class="col-right">
+                <a href="#" class="btn-ghost">Check Details</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Hume Vitality</strong></td>
+              <td>Bone Density</td>
+              <td style="color: var(--gold)">★★★★★</td>
+              <td class="col-right">
+                <a href="#" class="btn-ghost">Check Details</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <aside>
+      <div class="sidebar-card" style="border-color: var(--gold)">
+        <div
+          class="sb-head"
+          style="color: var(--gold); text-transform: uppercase"
+        >
+          PARTNER CONTENT
+        </div>
+        <div class="sb-body">
+          Official Amazon storefront for senior-friendly wearables. Shop Now →
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sb-head">Customer comments</div>
+        <div class="sb-body sb-quote">
+          "The fall detection gave my daughter peace of mind during my morning
+          walks."
+        </div>
+        <div class="sb-body" style="color: #777; margin-top: 5px">
+          — Margaret, Surrey
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <div class="sb-head" style="text-transform: uppercase">FAQ</div>
+        <div class="sb-body">
+          <b>Is it easy to use?</b><br />Yes, every device in our rankings is
+          chosen for senior-friendly interfaces.
+        </div>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="footer-row-1">
+        <span class="footer-choice">Top Choice: Apple Watch SE</span>
+        <a href="#" class="btn-gold">Check Details</a>
+      </div>
+      <span class="legal"
+        >© 2026 Senior SmartTech | As an Affiliate Associate, I earn from
+        qualifying purchases.</span
+      >
+    </footer>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Senior SmartTech | Modern Sanctuary Dashboard</title>
+    <link rel="stylesheet" href="site.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="dashboard-fluid header-grid">
+        <div class="logo-area">
+          <img
+            src="images/logo.svg"
+            alt="Senior SmartTech"
+            class="brand-logo"
+          />
+        </div>
+        <nav class="nav-right">
+          <a href="#rankings">Rankings</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </div>
     </header>
 
     <div class="dashboard-fluid main-layout">
-        
-        <main class="content-left">
-            <section class="hero-intro">
-                <h1>Wearable Tech, Built for Peace of Mind</h1>
-                <p>Empowering Seniors with Human-Centric Innovation.</p>
-                <a href="#rankings" class="btn-rankings">View Rankings</a>
-            </section>
+      <main class="content-left">
+        <section class="hero-intro">
+          <h1>Wearable Tech, Built for Peace of Mind</h1>
+          <p>Empowering Seniors with Human-Centric Innovation.</p>
+          <a href="#rankings" class="btn-rankings">View Rankings</a>
+        </section>
 
-            <section class="hero-gallery-l">
-                <div class="hero-main-card">
-                    <img src="images/smartwatch_senior_man.jpg" alt="Senior safety" class="img-fill man-fix">
-                </div>
-                <div class="hero-side-cards">
-                    <div class="side-card-top">
-                        <img src="images/smartwatch_close_up.jpg" alt="Tech detail" class="img-fill">
-                    </div>
-                    <div class="side-card-bottom">
-                        <img src="images/smartwatch_senior_woman.jpg" alt="Health monitoring" class="img-fill">
-                    </div>
-                </div>
-            </section>
-
-            <section id="rankings" class="table-container">
-                <div class="white-card">
-                    <h2>2026 Vitality Comparison</h2>
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Device</th>
-                                <th>Key Benefit</th>
-                                <th>Rating</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="p-cell"><div class="thumb"></div> Apple Watch SE</td>
-                                <td>Best Fall Detection</td>
-                                <td class="stars">★★★★★</td>
-                                <td><a href="#" class="btn-ghost">Check Details</a></td>
-                            </tr>
-                            <tr>
-                                <td class="p-cell"><div class="thumb"></div> Samsung Galaxy 7</td>
-                                <td>Heart Health Tech</td>
-                                <td class="stars">★★★★☆</td>
-                                <td><a href="#" class="btn-ghost">Check Details</a></td>
-                            </tr>
-                            <tr>
-                                <td class="p-cell"><div class="thumb"></div> Fitbit Versa 3</td>
-                                <td>6-Day Battery</td>
-                                <td class="stars">★★★★☆</td>
-                                <td><a href="#" class="btn-ghost">Check Details</a></td>
-                            </tr>
-                            <tr>
-                                <td class="p-cell"><div class="thumb"></div> Garmin Vivoactive</td>
-                                <td>GPS Reliability</td>
-                                <td class="stars">★★★★☆</td>
-                                <td><a href="#" class="btn-ghost">Check Details</a></td>
-                            </tr>
-                            <tr>
-                                <td class="p-cell"><div class="thumb"></div> Hume Vitality</td>
-                                <td>Bone Density Hub</td>
-                                <td class="stars">★★★★★</td>
-                                <td><a href="#" class="btn-ghost">Check Details</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-        </main>
-
-        <aside class="sidebar-flush" id="faq">
-            <div class="sidebar-inner-scroll">
-                <h3>Frequently Asked Questions</h3>
-                <div class="faq-item">
-                    <h4>Which watch is best for falls?</h4>
-                    <p>The Apple Watch SE remains the gold standard for UK seniors due to its responsive accelerometer and SOS triggers.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Can a watch monitor bone density?</h4>
-                    <p>No, bone density is measured by the Hume Vitality Scale, which then syncs results to your smartwatch.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Is Fitbit battery better than Apple?</h4>
-                    <p>Yes, Fitbit models generally offer 6+ days of battery, whereas Apple requires daily charging.</p>
-                </div>
+        <section class="hero-gallery-l">
+          <div class="hero-main-card">
+            <img
+              src="images/smartwatch_senior_man.jpg"
+              alt="Senior safety"
+              class="img-fill man-fix"
+            />
+          </div>
+          <div class="hero-side-cards">
+            <div class="side-card-top">
+              <img
+                src="images/smartwatch_close_up.jpg"
+                alt="Tech detail"
+                class="img-fill"
+              />
             </div>
-        </aside>
+            <div class="side-card-bottom">
+              <img
+                src="images/smartwatch_senior_woman.jpg"
+                alt="Health monitoring"
+                class="img-fill"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="rankings" class="table-container">
+          <div class="white-card">
+            <h2>2026 Vitality Comparison</h2>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Device</th>
+                  <th>Key Benefit</th>
+                  <th>Rating</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-cell">
+                    <div class="thumb"></div>
+                    Apple Watch SE
+                  </td>
+                  <td>Best Fall Detection</td>
+                  <td class="stars">★★★★★</td>
+                  <td><a href="#" class="btn-ghost">Check Details</a></td>
+                </tr>
+                <tr>
+                  <td class="p-cell">
+                    <div class="thumb"></div>
+                    Samsung Galaxy 7
+                  </td>
+                  <td>Heart Health Tech</td>
+                  <td class="stars">★★★★☆</td>
+                  <td><a href="#" class="btn-ghost">Check Details</a></td>
+                </tr>
+                <tr>
+                  <td class="p-cell">
+                    <div class="thumb"></div>
+                    Fitbit Versa 3
+                  </td>
+                  <td>6-Day Battery</td>
+                  <td class="stars">★★★★☆</td>
+                  <td><a href="#" class="btn-ghost">Check Details</a></td>
+                </tr>
+                <tr>
+                  <td class="p-cell">
+                    <div class="thumb"></div>
+                    Garmin Vivoactive
+                  </td>
+                  <td>GPS Reliability</td>
+                  <td class="stars">★★★★☆</td>
+                  <td><a href="#" class="btn-ghost">Check Details</a></td>
+                </tr>
+                <tr>
+                  <td class="p-cell">
+                    <div class="thumb"></div>
+                    Hume Vitality
+                  </td>
+                  <td>Bone Density Hub</td>
+                  <td class="stars">★★★★★</td>
+                  <td><a href="#" class="btn-ghost">Check Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <aside class="sidebar-flush" id="faq">
+        <div class="sidebar-inner-scroll">
+          <h3>Frequently Asked Questions</h3>
+          <div class="faq-item">
+            <h4>Which watch is best for falls?</h4>
+            <p>
+              The Apple Watch SE remains the gold standard for UK seniors due to
+              its responsive accelerometer and SOS triggers.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4>Can a watch monitor bone density?</h4>
+            <p>
+              No, bone density is measured by the Hume Vitality Scale, which
+              then syncs results to your smartwatch.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h4>Is Fitbit battery better than Apple?</h4>
+            <p>
+              Yes, Fitbit models generally offer 6+ days of battery, whereas
+              Apple requires daily charging.
+            </p>
+          </div>
+        </div>
+      </aside>
     </div>
 
     <footer class="main-footer">
-        <div class="dashboard-fluid footer-stack">
-            <div class="f-line-1"><strong>Top Choice: Apple Watch SE</strong> <a href="#" class="btn-gold-small">Check Details</a></div>
-            <div class="f-line-2">© 2026 Senior SmartTech</div>
-            <div class="f-line-3">As an Affiliate Associate, I earn from qualifying purchases.</div>
+      <div class="dashboard-fluid footer-stack">
+        <div class="f-line-1">
+          <strong>Top Choice: Apple Watch SE</strong>
+          <a href="#" class="btn-gold-small">Check Details</a>
         </div>
+        <div class="f-line-2">© 2026 Senior SmartTech</div>
+        <div class="f-line-3">
+          As an Affiliate Associate, I earn from qualifying purchases.
+        </div>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>

@@ -1,196 +1,222 @@
-/* SENIOR SMART TECH: PRODUCTION STYLESHEET 2026 */
-/* ===========================================================
-    SENIOR SMART TECH – MODERN SANCTUARY PRODUCTION CSS
-    Palette: Sage (#A2AC94), Charcoal (#6C6865), White (#FFFFFF)
-=========================================================== */
-/* MODERN SANCTUARY V11.0 - FINAL BRAND ALIGNMENT */
+/* SENIOR SMARTTECH MASTER SPEC V1.35 */
 :root {
-    --navy: #0B1D32;
-    --gold: #D4AF37;
-    --charcoal: #333333;
-    --white: #FFFFFF;
-    --light-grey: #f4f4f4;
+  --navy: #0b1d32;
+  --gold: #d4af37;
+  --bg-light: #f8f8f8;
+  --white: #ffffff;
+  --grey-text: #777777;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 18px;
-    margin: 0;
-    color: var(--charcoal);
-    background: var(--white);
-    padding-top: 130px; /* Offset for 120px Header */
-    padding-bottom: 140px; /* Offset for Triple Footer */
-    overflow-x: hidden; /* Prevent sidebar bleed jitter */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 85% 15%;
+  grid-template-areas: "header header" "main side" "footer footer";
+  grid-gap: 0px;
+  min-height: 100vh;
+  background: var(--white);
 }
 
-/* EDGE-TO-EDGE DASHBOARD */
-.dashboard-fluid {
-    width: 100%;
-    padding: 0 40px; /* Primary typographic gutter */
+/* 2. HEADER - COMPRESSED */
+header {
+  grid-area: header;
+  background: var(--navy);
+  padding: 8px 30px; /* Tightened from 12px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 220px;
+} /* Slightly smaller to match header */
+.nav {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
 }
 
-/* HEADER: W-ALIGNMENT ARCHITECTURE */
-.main-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 120px;
-    background: var(--navy);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* SURGICAL FIX 1: Aligns start of logo */
+/* 3. MAIN CONTENT */
+main {
+  grid-area: main;
+  padding: 25px 30px 40px 30px;
+  overflow: hidden;
 }
 
-.brand-logo {
-    width: 450px;
-    height: auto;
-    display: block;
-    margin-left: 40px; /* SURGICAL FIX 2: Matches .dashboard-fluid gutter for 'W' alignment */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  height: 120px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.hero-h1 {
+  font-size: 1.25rem;
+  color: var(--navy);
+  line-height: 1.1;
+  font-weight: 300;
+}
+.hero-p {
+  font-size: 0.8rem;
+  color: var(--grey-text);
+  margin-top: 5px;
 }
 
-.nav-right {
-    position: absolute;
-    right: 40px; /* Pinned to far right edge of banner */
+/* GALLERY - 120PX STRICT */
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 8px;
+  height: 120px;
+  overflow: hidden;
+}
+.img-fit {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-.nav-right a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* 5. TABLE CARD - REFINED ALIGNMENT */
+.vitality-card {
+  background: var(--white);
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 8px;
+}
+.table-title {
+  font-size: 0.95rem;
+  color: var(--navy);
+  margin-bottom: 10px;
+  font-weight: 300;
 }
 
-/* DASHBOARD LAYOUT */
-.main-layout {
-    display: flex;
-    min-height: calc(100vh - 270px);
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.7rem;
+  line-height: 1.1;
+}
+.data-table thead tr {
+  background: var(--bg-light);
+  height: 28px; /* Header height +2pts */
+}
+.data-table th {
+  padding: 0 10px;
+  text-align: left;
+  font-weight: bold;
+}
+.data-table th.col-right {
+  text-align: right;
+} /* Action Header Right */
+.data-table td {
+  padding: 2px 10px;
+  border-bottom: 1px solid #f9f9f9;
+}
+.data-table tr:hover {
+  background-color: #fcfcfc;
 }
 
-.content-left {
-    flex: 0 0 70%;
-    padding-right: 40px;
+/* Flush Right Action Column */
+.col-right {
+  text-align: right;
+  padding-right: 0 !important;
 }
-
-/* SIDEBAR: FLUSH RIGHT VIEWPORT PIN */
-.sidebar-flush {
-    flex: 0 0 30%;
-    background: var(--light-grey);
-    border-left: 1px solid #ddd;
-    margin-right: 0; /* SURGICAL FIX 3: Pins to viewport edge */
-}
-
-.sidebar-inner-scroll {
-    height: 100%;
-    max-height: 80vh;
-    overflow-y: auto;
-    padding: 40px;
-}
-
-/* HERO SECTION READABILITY */
-.hero-intro h1 { font-size: 3.5rem; color: var(--navy); margin: 0; }
-.hero-intro p { font-size: 1.4rem; margin: 10px 0 30px 0; }
-
-.btn-rankings {
-    display: inline-block;
-    background: var(--navy);
-    color: white;
-    padding: 16px 40px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    margin-bottom: 50px;
-}
-
-/* IMAGE FILL & POSITIONING */
-.hero-gallery-l {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 15px;
-    height: 450px;
-    margin-bottom: 60px;
-}
-
-.hero-side-cards {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
-}
-
-.img-fill { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; /* SURGICAL FIX 4: No white gaps */
-    display: block; 
-}
-
-/* SPECIFIC CROP FOR SENIOR MAN WATCH VISIBILITY */
-.man-fix { object-position: center 80%; } 
-
-/* VITALITY TABLE: GREY HEADERS */
-.table-container { margin-bottom: 60px; }
-.white-card { background: white; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); overflow: hidden; }
-.comparison-table { width: 100%; border-collapse: collapse; }
-
-.comparison-table thead th {
-    background: var(--light-grey); /* Header Recovery */
-    padding: 20px;
-    text-align: left;
-    color: var(--navy);
-    text-transform: uppercase;
-    font-size: 0.9rem;
-}
-
-.comparison-table td { padding: 20px; border-bottom: 1px solid #eee; }
-.p-cell { display: flex; align-items: center; gap: 15px; font-weight: bold; }
-.thumb { width: 45px; height: 45px; background: #ddd; border-radius: 4px; }
-.stars { color: var(--gold); }
 
 .btn-ghost {
-    border: 2px solid var(--gold);
-    color: var(--navy);
-    padding: 8px 15px;
-    text-decoration: none;
-    font-weight: bold;
+  border: 1px solid var(--gold);
+  color: var(--navy);
+  padding: 2px 6px;
+  text-decoration: none;
+  font-size: 0.55rem;
+  font-weight: bold;
+  border-radius: 3px;
+  display: inline-block;
 }
 
-/* TRIPLE-STACK FOOTER */
-.main-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: var(--navy);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    z-index: 1001;
+/* 6. SIDEBAR - MINIMALISED */
+aside {
+  grid-area: side;
+  background: var(--bg-light);
+  border-left: 1px solid #eee;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.sidebar-card {
+  background: var(--white);
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  max-height: 120px;
+  overflow-y: auto;
+}
+.sidebar-card::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebar-card::-webkit-scrollbar-thumb {
+  background: var(--navy);
 }
 
-.f-line-1 { font-size: 1.2rem; margin-bottom: 10px; color: var(--white); }
-.f-line-2 { margin-bottom: 5px; color: var(--white); }
-.f-line-3 { font-size: 12px; opacity: 0.8; color: var(--white); }
-
-.btn-gold-small {
-    background: var(--gold);
-    color: var(--navy);
-    padding: 5px 15px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-left: 15px;
+.sb-head {
+  font-size: 0.55rem;
+  color: var(--navy);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.sb-body {
+  font-size: 0.6rem;
+  color: #555;
+}
+.sb-quote {
+  font-family: Georgia, serif;
+  font-style: italic;
 }
 
-/* FAQ STYLING */
-.faq-item { margin-bottom: 30px; border-bottom: 1px solid #ddd; padding-bottom: 15px; }
-.faq-item h4 { color: var(--navy); margin-bottom: 10px; font-size: 1.1rem; }
+/* 7. FOOTER - TWO LINES COMPRESSED */
+footer {
+  grid-area: footer;
+  background: var(--navy);
+  color: var(--white);
+  padding: 10px 30px;
+  text-align: center;
+}
+.footer-row-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 6px;
+}
+.footer-choice {
+  font-size: 12px;
+  font-weight: 500;
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 4px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 0.6rem;
+}
+.legal {
+  font-size: 9px;
+  opacity: 0.6;
+  display: block;
+}
 
-@media (max-width: 1100px) {
-    .main-layout { flex-direction: column; }
-    .content-left, .sidebar-flush { flex: 100%; margin: 0; }
-    .sidebar-flush { border-left: none; border-top: 1px solid #ddd; }
-    .brand-logo { width: 300px; margin-left: 20px; }
+@media (max-width: 900px) {
+  body {
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "main" "side" "footer";
+  }
 }
